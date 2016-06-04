@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="comp2007_s2016_team_proj.Contact" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <!--
+        Authors: Lucy, John
+        Purpose: This page will be used if they wish to provide feedback or concerns about the site.
+        Date Created: 06/04/16
+        Last Modified: 06/04/16
+        -->
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-primary">

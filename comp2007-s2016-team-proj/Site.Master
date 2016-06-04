@@ -1,6 +1,13 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="comp2007_s2016_team_proj.Site" %>
 <%@ Register Src="~/User_Controls/Navbar.ascx" TagName="Navbar" TagPrefix="bs3" %>
 
+<!--
+    Authors: Lucy, John
+    Purpose: Use as a template for the general pages
+    Date Created: 06/04/16
+    Last Modified: 06/04/16
+    -->
+
 <!DOCTYPE html>
 
 <html lang="en">

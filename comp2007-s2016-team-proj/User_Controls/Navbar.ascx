@@ -1,5 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Navbar.ascx.cs" Inherits="comp2007_s2016_team_proj.Navbar" %>
 
+<!--
+    Authors: Lucy, John
+    Purpose: Navbar that will be used to navigate between pages
+    Date Created: 06/04/16
+    Last Modified: 06/04/16
+    -->
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
