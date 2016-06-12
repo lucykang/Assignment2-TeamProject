@@ -11,7 +11,11 @@ namespace comp2007_s2016_team_proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Page.Title == "User Registration")
+            {
+                //if the page is registration, add attribute.
+                //register.Attribute.Add("style", "margin-top: -30px;");
+            }
         }
     }
 }

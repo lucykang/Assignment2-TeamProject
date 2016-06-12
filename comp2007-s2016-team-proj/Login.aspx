@@ -11,7 +11,7 @@
             <div class="wrapper">
                 <div class="form-signin panel">
                     <h3 class="form-signin-heading text-center">
-                        <img src="Assets/logo.png" alt="Base Tracker" width="120"/>
+                        <img src="Assets/icon.png" alt="Base Tracker" width="100"/>
                     </h3>
                     <hr>
                     <h3 class="form-signin-heading text-center">Log In</h3><br>
@@ -19,19 +19,25 @@
                         <div class="input-group">
                             <span class="input-group-addon" id="username-addon"><i class="fa fa-user"></i></span>
                             <asp:TextBox runat="server" CssClass="form-control" ID="UsernameTextBox" placeholder="Username"></asp:TextBox>
-                            <asp:RequiredFieldValidator ForeColor="OrangeRed" Display="Dynamic" ID="UsernameRequiredFieldValidator" runat="server" ErrorMessage="Username is required" ControlToValidate="UsernameTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
+                        <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="UsernameRequiredFieldValidator" runat="server" ErrorMessage="Username is required" ControlToValidate="UsernameTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>
                     </div>
                     
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon" id="password-addon1"><i class="fa fa-lock"></i></span>
-                            <asp:TextBox runat="server" CssClass="form-control" ID="PasswordTextBox" placeholder="Password"></asp:TextBox>
-                            <asp:RequiredFieldValidator ForeColor="OrangeRed" Display="Dynamic" ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Password is required" ControlToValidate="PasswordTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>  
+                            <asp:TextBox runat="server" CssClass="form-control" ID="PasswordTextBox" placeholder="Password" TextMode="Password"></asp:TextBox>
                         </div>
+                        <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Password is required" ControlToValidate="PasswordTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>
                     </div>
-                    <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-submit" Text="Login" CausesValidation="true" OnClick="LoginBtn_Click"/>
-                    <asp:Button Text="Register" ID="RegisterBtn" CssClass="btn btn-warning btn-lg" runat="server" UseSubmitBehavior="false" CausesValidation="false" OnClick="RegisterBtn_Click" />
+                    <div class="form-group text-center">
+                        <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-submit" Text="Login" CausesValidation="true" OnClick="LoginBtn_Click"/>
+                    <asp:Button Text="Register" ID="RegisterBtn" CssClass="btn btn-register" runat="server" UseSubmitBehavior="false" CausesValidation="false" OnClick="RegisterBtn_Click" />
+                    </div>
+                    
+                    <p>
+                        <asp:Label ID="MsgLabel" ForeColor="Red" runat="server" />
+                    </p>
                 </div>
             </div> <!-- end of wrapper -->
     </div> <!-- end of main -->

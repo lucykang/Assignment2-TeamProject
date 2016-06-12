@@ -21,16 +21,16 @@ namespace comp2007_s2016_team_proj
             //use EF to connect to the server
             using (DefaultConnection db = new DefaultConnection())
             {
-                User loginUser = new User();
+                User loginUser;
 
                 //get the user record from db
                 loginUser = (from user in db.Users
                              where user.Username == UsernameTextBox.Text
                              select user).FirstOrDefault();
-
-                if(loginUser.Password != PasswordTextBox.Text)
+                //if there was no such user found or password doesn't match, show message.
+                if(loginUser == null || loginUser.Password != PasswordTextBox.Text)
                 {
-                    myModal.ResolveUrl("#myModal");
+                    MsgLabel.Text = "Invalid credentials. Please try again.";
                 }
                 else
                 {
@@ -42,7 +42,7 @@ namespace comp2007_s2016_team_proj
 
         protected void RegisterBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Register.aspx");
         }
     }
 }

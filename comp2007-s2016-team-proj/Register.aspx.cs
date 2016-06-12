@@ -13,5 +13,15 @@ namespace comp2007_s2016_team_proj
         {
 
         }
+
+        protected void SubmitBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CancelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

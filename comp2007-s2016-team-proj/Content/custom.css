@@ -1,0 +1,73 @@
+﻿/*
+    File name: custom-styles.css
+    Author's name: Lucy, John
+    Purpose: custom css file
+    Date Created: 06/04/16
+    Last Modified: 06/11/16
+*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+    margin-bottom: 50px;
+    font-size: 12pt;
+    background-color: #26C1FF;
+}
+
+.panel {
+	background-color: rgba(255, 255, 255, 0.7);
+    /*font-family: raleway_thin-webfont;*/
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    margin-top: -12px;
+    /*
+    text-align: center;
+    font-size: 70px;
+    margin-top: 0px;
+    */
+}
+.navbar-transparent {
+    background-color: #FF9F19;
+}
+.navbar-transparent .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    /*font-family: raleway_thin-webfont;*/
+    font-size: 15px;
+    color: #338BDE;
+}
+.navbar-nav > li > a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.error {
+    background: #bd0f0f;
+}
+
+/* Button Style */
+.btn-submit {
+    background-color: #FF9F19;
+    color: white;
+}
+
+.btn-register {
+    background-color: #338BDE;
+    color: white;
+}
+
+/* Login Page */
+.wrapper{
+    margin-top: 45px;
+}
+
+.form-signin{
+  max-width: 420px;
+  padding: 30px 38px 38px;
+  margin: 0 auto;
+  border: 1px solid #cccccc;
+}
