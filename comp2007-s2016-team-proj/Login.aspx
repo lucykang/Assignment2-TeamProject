@@ -8,7 +8,6 @@
         Last Modified: 06/11/16
     -->
     <div class="main">
-        <div class="container">
             <div class="wrapper">
                 <div class="form-signin panel">
                     <h3 class="form-signin-heading text-center">
@@ -31,11 +30,9 @@
                             <asp:RequiredFieldValidator ForeColor="OrangeRed" Display="Dynamic" ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Password is required" ControlToValidate="PasswordTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>  
                         </div>
                     </div>
-                    
-                    <p>Not Registered? <a style="color: #FF9F1C" href="/register">Register here</a></p>
-                    <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-submit" Text="Login" CausesValidation="true" OnClick=""/>
+                    <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-submit" Text="Login" CausesValidation="true" OnClick="LoginBtn_Click"/>
+                    <asp:Button Text="Register" ID="RegisterBtn" CssClass="btn btn-warning btn-lg" runat="server" UseSubmitBehavior="false" CausesValidation="false" OnClick="RegisterBtn_Click" />
                 </div>
             </div> <!-- end of wrapper -->
-        </div> <!-- end of container -->
     </div> <!-- end of main -->
 </asp:Content>
