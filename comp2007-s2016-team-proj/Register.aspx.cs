@@ -13,7 +13,45 @@ namespace comp2007_s2016_team_proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if((!IsPostBack) && Request.QueryString.Count > 0)){
+                this.GetUser();
+            }
+        }
 
+        protected void GetUser()
+        {
+            // populate teh form with existing data from the database
+            int UserID = Convert.ToInt32(Request.QueryString["UserID"]);
+
+            // connect to the EF DB
+            using (DefaultConnection db = new DefaultConnection())
+            {
+                // populate a student object instance with the StudentID from the URL Parameter
+                User updatedUser = (from user in db.Users
+                                          where user.UserID == UserID
+                                          select user).FirstOrDefault();
+
+                // map the student properties to the form controls
+                if (updatedUser != null)
+                {
+                    UsernameTextBox.Text = updatedUser.Username;
+                    PasswordTextBox.Text = updatedUser.Password;
+
+
+
+
+                    //uncomment this part after modifing db
+                    
+                    /*
+                    LastNameTextBox.Text = updatedUser.LastName;
+                    FirstNameTextBox.Text = updatedUser.FirstName;
+                    EmailTextBox.Text = updatedUser.Email;
+                    */
+
+
+
+                }
+            }
         }
 
         protected void SubmitBtn_Click(object sender, EventArgs e)

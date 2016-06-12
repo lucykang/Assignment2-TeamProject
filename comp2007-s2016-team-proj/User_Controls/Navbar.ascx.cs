@@ -16,6 +16,15 @@ namespace comp2007_s2016_team_proj
                 case "Home Page":
                     home.Attributes.Add("class", "active");
                     break;
+                case "Main Game Page":
+                    game.Attributes.Add("class", "active");
+                    break;
+                case "Login":
+                    login.Attributes.Add("class", "active");
+                    break;
+                case "User Detail":
+                    edit.Attributes.Add("class", "active");
+                    break;
                 case "Contact":
                     contact.Attributes.Add("class", "active");
                     break;

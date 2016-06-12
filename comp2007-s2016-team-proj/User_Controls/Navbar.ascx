@@ -26,6 +26,7 @@
                 <li id="home" runat="server"><a href="/"><i class="fa fa-lg fa-home"></i> Home</a></li>
                 <li id="game" runat="server"><a href="/MainGamePage.aspx">Game</a></li>
                 <li id="login" runat="server"><a href="/Login.aspx">Login</a></li>
+                <li id="edit" runat="server"><a href="../Register.aspx">Account</a></li>
                 <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-lg fa-phone"></i> Contact</a></li>
             </ul>
         </div>

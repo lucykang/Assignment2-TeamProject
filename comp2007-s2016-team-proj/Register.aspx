@@ -1,4 +1,4 @@
-﻿<%@ Page Title="User Registration" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="comp2007_s2016_team_proj.Register" %>
+﻿<%@ Page Title="User Detail" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="comp2007_s2016_team_proj.Register" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!--
         Authors: Lucy, John
@@ -14,7 +14,7 @@
                         <img src="Assets/icon.png" alt="Base Tracker" width="100"/>
                     </h3>
                     <hr>
-                    <h3 class="form-signin-heading text-center">User Registration</h3><br>
+                    <h3 class="form-signin-heading text-center">User Detail</h3><br>
                     <div class="form-group">
                         <label class="control-label" for="UsernameTextBox">Username </label>
                         <asp:TextBox runat="server" CssClass="form-control" ID="UsernameTextBox" placeholder="Username"></asp:TextBox>

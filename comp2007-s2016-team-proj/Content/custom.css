@@ -42,7 +42,9 @@ body{
     font-size: 15px;
     color: #338BDE;
 }
-.navbar-nav > li > a:hover{
+.navbar-transparent .navbar-nav>.active>a,
+.navbar-transparent .navbar-nav>.active>a:focus,
+.navbar-transparent .navbar-nav>.active>a:hover{
     background-color: rgba(255, 255, 255, 0.2);
 }
 .error {
