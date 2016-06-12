@@ -5,7 +5,7 @@
         Authors: Lucy, John
         Purpose: Landing page for the site where they can choose to login or view as guest
         Date Created: 06/04/16
-        Last Modified: 06/04/16
+        Last Modified: 06/11/16
         -->
     <bs3:Jumbotron runat="server" ID="Jumbotron">
         <Body>
