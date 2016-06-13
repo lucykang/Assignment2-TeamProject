@@ -13,7 +13,7 @@ namespace comp2007_s2016_team_proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if((!IsPostBack) && Request.QueryString.Count > 0)){
+            if((!IsPostBack) && Request.QueryString.Count > 0){
                 this.GetUser();
             }
         }
@@ -36,20 +36,9 @@ namespace comp2007_s2016_team_proj
                 {
                     UsernameTextBox.Text = updatedUser.Username;
                     PasswordTextBox.Text = updatedUser.Password;
-
-
-
-
-                    //uncomment this part after modifing db
-                    
-                    /*
                     LastNameTextBox.Text = updatedUser.LastName;
                     FirstNameTextBox.Text = updatedUser.FirstName;
                     EmailTextBox.Text = updatedUser.Email;
-                    */
-
-
-
                 }
             }
         }
@@ -75,20 +64,9 @@ namespace comp2007_s2016_team_proj
                 //add form data to the new user record
                 newUser.Username = UsernameTextBox.Text;
                 newUser.Password = PasswordTextBox.Text;
-
-
-
-                
-                //uncomment the following when db is modified
-                
-                /*
                 newUser.FirstName = FirstNameTextBox.Text;
                 newUser.LastName = LastNameTextBox.Text;
                 newUser.Email = EmailTextBox.Text;
-                */
-
-
-
 
                 //use LINQ to ADO.NET to add/insert new user to the db
                 if(UserID == 0)

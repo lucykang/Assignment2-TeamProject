@@ -12,13 +12,18 @@ namespace comp2007_s2016_team_proj.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Game
     {
-        public int UserID { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
+        public int GameID { get; set; }
+        public string Name { get; set; }
+        public System.DateTime GameDate { get; set; }
+        public int WinTeam { get; set; }
+        public int LostTeam { get; set; }
+        public int WinTeamScore { get; set; }
+        public int LostTeamScore { get; set; }
+        public int NumSpectators { get; set; }
+    
+        public virtual Team Team { get; set; }
+        public virtual Team Team1 { get; set; }
     }
 }
