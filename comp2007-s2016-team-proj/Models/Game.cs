@@ -17,6 +17,7 @@ namespace comp2007_s2016_team_proj.Models
         public int GameID { get; set; }
         public string Name { get; set; }
         public System.DateTime GameDate { get; set; }
+        public string GameDescription { get; set; }
         public int WinTeam { get; set; }
         public int LostTeam { get; set; }
         public int WinTeamScore { get; set; }

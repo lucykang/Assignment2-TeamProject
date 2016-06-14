@@ -12,6 +12,7 @@
           <Property Name="GameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="GameDate" Type="date" Nullable="false" />
+          <Property Name="GameDescription" Type="varchar" MaxLength="2000" Nullable="false" />
           <Property Name="WinTeam" Type="int" Nullable="false" />
           <Property Name="LostTeam" Type="int" Nullable="false" />
           <Property Name="WinTeamScore" Type="int" Nullable="false" />
@@ -24,6 +25,7 @@
           </Key>
           <Property Name="TeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -85,6 +87,7 @@
           <Property Name="GameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="GameDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="GameDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="WinTeam" Type="Int32" Nullable="false" />
           <Property Name="LostTeam" Type="Int32" Nullable="false" />
           <Property Name="WinTeamScore" Type="Int32" Nullable="false" />
@@ -99,6 +102,7 @@
           </Key>
           <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Games" Relationship="Self.FK_Courses_LostTeamID" FromRole="Teams" ToRole="Games" />
           <NavigationProperty Name="Games1" Relationship="Self.FK_Courses_WinTeamID" FromRole="Teams" ToRole="Games" />
         </EntityType>
@@ -162,6 +166,7 @@
                 <ScalarProperty Name="GameID" ColumnName="GameID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="GameDate" ColumnName="GameDate" />
+                <ScalarProperty Name="GameDescription" ColumnName="GameDescription" />
                 <ScalarProperty Name="WinTeam" ColumnName="WinTeam" />
                 <ScalarProperty Name="LostTeam" ColumnName="LostTeam" />
                 <ScalarProperty Name="WinTeamScore" ColumnName="WinTeamScore" />
@@ -175,6 +180,7 @@
               <MappingFragment StoreEntitySet="Teams">
                 <ScalarProperty Name="TeamID" ColumnName="TeamID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
