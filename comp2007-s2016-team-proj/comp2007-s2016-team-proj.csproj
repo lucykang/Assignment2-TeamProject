@@ -82,6 +82,8 @@
   <ItemGroup>
     <Content Include="Assets\icon.png" />
     <Content Include="Assets\logo.png" />
+    <Content Include="GameDetails.aspx" />
+    <Content Include="GameRegister.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MainGamePage.aspx" />
     <Content Include="Models\BaseTrackerModel.Context.tt">
@@ -163,6 +165,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameDetails.aspx.cs">
+      <DependentUpon>GameDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameDetails.aspx.designer.cs">
+      <DependentUpon>GameDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameRegister.aspx.cs">
+      <DependentUpon>GameRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameRegister.aspx.designer.cs">
+      <DependentUpon>GameRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

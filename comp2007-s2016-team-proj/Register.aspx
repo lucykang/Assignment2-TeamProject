@@ -5,7 +5,7 @@
         Purpose: This page will allow the user to register a new account
             - a button to renavigate to the login page if they already have one
         Date Created: 06/04/16
-        Last Modified: 06/04/16
+        Last Modified: 06/11/16
     -->
     <div class="main">
             <div class="wrapper">
