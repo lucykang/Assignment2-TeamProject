@@ -12,7 +12,7 @@
             <h1>Game Details</h1>
             <div class="row">
                 <div class="col-md-6">
-                    <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID">
+                    <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-bordered table-striped table-hover">
                         <Fields>
                             <asp:BoundField DataField="GameID" HeaderText="GameID" ReadOnly="True">
                                 <HeaderStyle Width="150px" />
@@ -23,7 +23,7 @@
                                 HeaderText="Game Description: " />
                             <asp:BoundField DataField="NumSpectators"
                                 HeaderText="No. of Spectators: " />
-                            <asp:BoundField DataField="WinTeam"
+                            <asp:BoundField DataField="WinTeam" 
                                 HeaderText="Winning Team: " />
                         </Fields>
                     </asp:DetailsView>

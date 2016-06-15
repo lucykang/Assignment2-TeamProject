@@ -37,13 +37,17 @@ namespace comp2007_s2016_team_proj
             // connect to EF
             using (DefaultConnection db = new DefaultConnection())
             {
-                // query the Students Table using EF and LINQ
+                // query the game details using EF and LINQ
                 var Game = (from game in db.Games
                             select game);
+                
+                var Team = (from team in db.Teams
+                            select team);
 
                 // bind the result to the GridView
                 GameDetailsView.DataSource = Game.AsQueryable().ToList();
                 GameDetailsView.DataBind();
+                
             }
         }
     }
