@@ -46,10 +46,6 @@ namespace comp2007_s2016_team_proj
                 // bind the result to the GridView
                 GameDetailsView.DataSource = Game.AsQueryable().ToList();
                 GameDetailsView.DataBind();
-                WinTeamDetailsView.DataSource = Game.AsQueryable().ToList();
-                WinTeamDetailsView.DataBind();
-                LostTeamDetailsView.DataSource = Game.AsQueryable().ToList();
-                LostTeamDetailsView.DataBind();
             }
             /*
             using (DefaultConnection teamdb = new DefaultConnection())
