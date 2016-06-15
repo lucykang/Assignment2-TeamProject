@@ -73,3 +73,8 @@ body{
   margin: 0 auto;
   border: 1px solid #cccccc;
 }
+
+/* Game Details Page */
+.table, .table-borderless td, .table-borderless th{
+    border: none !important;
+}

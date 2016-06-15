@@ -18,13 +18,12 @@ namespace comp2007_s2016_team_proj.Models
         public string Name { get; set; }
         public System.DateTime GameDate { get; set; }
         public string GameDescription { get; set; }
-        public int WinTeam { get; set; }
-        public int LostTeam { get; set; }
+        public string WinTeam { get; set; }
+        public string WinTeamDescription { get; set; }
         public int WinTeamScore { get; set; }
+        public string LostTeam { get; set; }
+        public string LostTeamDescription { get; set; }
         public int LostTeamScore { get; set; }
         public int NumSpectators { get; set; }
-    
-        public virtual Team Team { get; set; }
-        public virtual Team Team1 { get; set; }
     }
 }

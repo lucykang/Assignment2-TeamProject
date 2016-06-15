@@ -39,16 +39,28 @@ namespace comp2007_s2016_team_proj
             {
                 // query the game details using EF and LINQ
                 var Game = (from game in db.Games
-                            select game);
+                                //join team in db.Teams on game.WinTeam equals team.TeamID
+                                //where game.LostTeam == team.TeamID
+                            select game);//new { GameName = game.Name, WinTeamName = game.WinTeam.Name });
                 
-                var Team = (from team in db.Teams
-                            select team);
-
                 // bind the result to the GridView
                 GameDetailsView.DataSource = Game.AsQueryable().ToList();
                 GameDetailsView.DataBind();
-                
+                TeamDetailsView.DataSource = Game.AsQueryable().ToList();
+                TeamDetailsView.DataBind();
             }
+            /*
+            using (DefaultConnection teamdb = new DefaultConnection())
+            {
+                var Team = (from team in teamdb.Teams
+                            select team);
+
+                
+                GameDetailsView.DataSource = Team.AsQueryable().ToList();
+                GameDetailsView.DataBind();
+            }
+            */
+            
         }
     }
 }

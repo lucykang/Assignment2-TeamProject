@@ -20,5 +20,14 @@ namespace comp2007_s2016_team_proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DetailsView GameDetailsView;
+        
+        /// <summary>
+        /// TeamDetailsView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView TeamDetailsView;
     }
 }
