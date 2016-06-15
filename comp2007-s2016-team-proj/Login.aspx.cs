@@ -27,6 +27,7 @@ namespace comp2007_s2016_team_proj
                 loginUser = (from user in db.Users
                              where user.Username == UsernameTextBox.Text
                              select user).FirstOrDefault();
+
                 //if there was no such user found or password doesn't match, show message.
                 if(loginUser == null || loginUser.Password != PasswordTextBox.Text)
                 {

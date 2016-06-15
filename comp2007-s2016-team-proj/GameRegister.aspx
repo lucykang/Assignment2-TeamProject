@@ -5,7 +5,7 @@
         Authors: Lucy, John
         Purpose: This page will allow user to register game.
         Date Created: 06/13/16
-        Last Modified: 06/13/16
+        Last Modified: 06/15/16
     -->
 
 </asp:Content>

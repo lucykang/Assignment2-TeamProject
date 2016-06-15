@@ -5,22 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-using comp2007_s2016_team_proj.Models;
-
-namespace comp2007_s2016_team_proj
+namespace comp2007_s2016_team_proj.User_Controls
 {
-    public partial class MainGamePage : System.Web.UI.Page
+    public partial class GameBox : System.Web.UI.UserControl
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void FetchGames()
-        {
-            
-        }
-
     }
 }

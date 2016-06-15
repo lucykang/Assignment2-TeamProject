@@ -78,3 +78,14 @@ body{
 .table, .table-borderless td, .table-borderless th{
     border: none !important;
 }
+
+.jumbotron .page-header {
+    border-bottom: 1px solid #A0A0A0;
+}
+
+.clearfix {
+    display: block;
+    width: 100%;
+    visibility: hidden;
+    clear: both;
+}
