@@ -46,8 +46,10 @@ namespace comp2007_s2016_team_proj
                 // bind the result to the GridView
                 GameDetailsView.DataSource = Game.AsQueryable().ToList();
                 GameDetailsView.DataBind();
-                TeamDetailsView.DataSource = Game.AsQueryable().ToList();
-                TeamDetailsView.DataBind();
+                WinTeamDetailsView.DataSource = Game.AsQueryable().ToList();
+                WinTeamDetailsView.DataBind();
+                LostTeamDetailsView.DataSource = Game.AsQueryable().ToList();
+                LostTeamDetailsView.DataBind();
             }
             /*
             using (DefaultConnection teamdb = new DefaultConnection())
@@ -61,6 +63,20 @@ namespace comp2007_s2016_team_proj
             }
             */
             
+        }
+
+        // The id parameter should match the DataKeyNames value set on the control
+        // or be decorated with a value provider attribute, e.g. [QueryString]int id
+        //public IQueryable<Game> TeamDetailsView_GetItem([QueryString("GameID")] int? gameId
+        public IQueryable<Game> TeamDetailsView_GetItem()
+        {
+            
+            var _db = new comp2007_s2016_team_proj.Models.DefaultConnection();
+            IQueryable<Game> query = _db.Games;
+            //int gameID = 4000;
+
+            query = query.Where(game => game.GameID == 4001);
+            return query;
         }
     }
 }

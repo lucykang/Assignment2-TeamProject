@@ -30,24 +30,35 @@
                     </asp:DetailsView>
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <asp:DetailsView ID="TeamDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-borderless">
-                        <Fields>
-                            <asp:BoundField DataField="WinTeam" ItemStyle-CssClass="bg-primary" />
-                            <asp:BoundField DataField="WinTeamDescription" ItemStyle-CssClass="bg-warning" />
-                            <asp:BoundField DataField="WinTeamScore" FooterText="ddddddd" ItemStyle-CssClass="bg-warning" />
-                            <asp:BoundField DataField="LostTeam" ItemStyle-CssClass="bg-danger" />
-                            <asp:BoundField DataField="LostTeamDescription" ItemStyle-CssClass="bg-warning" />
-                            <asp:BoundField DataField="LostTeamScore" ItemStyle-CssClass="bg-warning" />
-
-                        </Fields>
-                    </asp:DetailsView>
-                        
-                    </div>
-                    <div class="row">
-
-                    </div>
+                <div class="col-md-5">
+                    <asp:FormView ID="TeamDetailsView" runat="server" ItemType="comp2007_s2016_team_proj.Models.Game" SelectMethod="TeamDetailsView_GetItem" RenderOuterTable="false">
+                        <ItemTemplate>
+                            <div class="row">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4><%#:Item.WinTeam %></h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p><%#:Item.WinTeamDescription %></p>
+                                        <p>Total points scored: <%#:Item.WinTeamScore %></p>
+                                        <p>Total points allowed: <%#:Item.LostTeamScore %></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h4><%#:Item.LostTeam %></h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p><%#:Item.LostTeamDescription %></p>
+                                        <p>Total points scored: <%#:Item.LostTeamScore %></p>
+                                        <p>Total points allowed: <%#:Item.WinTeamScore %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:FormView>
                 </div>
             </div>
             
