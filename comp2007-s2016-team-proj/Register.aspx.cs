@@ -18,6 +18,14 @@ namespace comp2007_s2016_team_proj
             }
         }
 
+        /**
+         * <summary>
+         * This method gets the user data from the DB
+         * </summary>
+         * 
+         * @method GetUser
+         * @returns {void}
+         */
         protected void GetUser()
         {
             // populate teh form with existing data from the database

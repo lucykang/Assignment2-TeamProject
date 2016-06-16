@@ -13,6 +13,7 @@
             <a href="GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-success"><i class="fa fa-pencil"></i></a>
             <br />
             <div class="row">
+                <!-- Game details -->
                 <div class="col-md-6 panel">
                     <br />
                     <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-striped table-borderless">
@@ -27,6 +28,7 @@
                     </asp:DetailsView>
                 </div>
                 <div class="col-md-1"></div>
+                <!-- Team details-->
                 <div class="col-md-5">
                     <asp:FormView ID="TeamDetailsView" runat="server" ItemType="comp2007_s2016_team_proj.Models.Game" SelectMethod="TeamDetailsView_GetItem" RenderOuterTable="false">
                         <ItemTemplate>
