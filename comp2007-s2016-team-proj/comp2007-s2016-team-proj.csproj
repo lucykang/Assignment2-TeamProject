@@ -85,6 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\background.jpg" />
+    <Content Include="Assets\Baseball-background.jpg" />
+    <Content Include="Assets\Baseball-macro.jpg" />
+    <Content Include="Assets\Baseball-Wallpapers.jpg" />
+    <Content Include="Assets\Free-Baseball.jpg" />
     <Content Include="Assets\icon.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Content\Default.css" />

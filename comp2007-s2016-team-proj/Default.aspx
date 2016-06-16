@@ -10,8 +10,9 @@
         Date Created: 06/04/16
         Last Modified: 06/15/16
         -->
+    
     <div class="background-cover">
-        <img src="Assets/background.jpg" />
+         <img src="Assets/Baseball-background.jpg" />
     </div>
     <div class="row text-center">
         <div class="col-sm-4">
@@ -54,4 +55,5 @@
         </div>
     </div>
     <% } %>
+        </div>
 </asp:Content>

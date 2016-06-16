@@ -16,6 +16,10 @@ namespace comp2007_s2016_team_proj
                 //if the page is registration, add attribute.
                 //register.Attribute.Add("style", "margin-top: -30px;");
             }
+            if(Page.Title == "Home Page")
+            {
+                //fullback.Attributes.Add("class", "full");
+            }
         }
     }
 }

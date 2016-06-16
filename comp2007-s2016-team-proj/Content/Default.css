@@ -7,7 +7,18 @@
     left: 0;
     z-index: -1;
 }
-
+.full {
+    background: url(../Assets/Free-Baseball.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 .background-cover img {
     width: 100%;
     opacity: 0.65;
