@@ -9,8 +9,8 @@
     -->
     <div class="panel">
         <div class="page-header">
-            <h1>Department Details</h1>
-            <h3>All fields are required</h3>
+            <h1>Game Registration</h1>
+            <h3 class="text-primary">All fields are required</h3>
         </div>
 
         <!-- Game Details -->
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="Date">Date:</label>
-                <asp:TextBox CssClass="form-control" ID="Date" TextMode="Date" required="true" runat="server" />
+                <asp:TextBox CssClass="form-control" ID="Date" TextMode="Date" required="true" runat="server" placeholder="ex)2016-06-13"/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="SpecatorCount">How many Spectators:</label>
