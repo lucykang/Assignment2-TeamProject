@@ -9,7 +9,7 @@
     -->
     <div class="panel">
         <div class="page-header">
-            <h1>Department Details</h1>
+            <h1>Game Details</h1>
             <h3>All fields are required</h3>
         </div>
 

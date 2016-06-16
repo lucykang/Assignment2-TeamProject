@@ -1,0 +1,14 @@
+﻿.background-cover {
+    background-color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.background-cover img {
+    width: 100%;
+    opacity: 0.65;
+}
