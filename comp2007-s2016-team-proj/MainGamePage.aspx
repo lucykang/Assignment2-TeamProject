@@ -13,22 +13,29 @@
         <div class="page-header">
             <h1>Recent Games</h1>
         </div>
+        <div style="margin-left: 15px; margin-bottom: 10px">
+            <a href="GameRegister.aspx" class="btn btn-success"><i class="fa fa-lg fa-plus"></i></a>
+        </div>
         <div runat="server" id="GameList">
-            <div class="col-md-4">
-                <div class="thumbnail text-center gamebox">
-                    <h3>
-                        Phillies 
-                        -
-                        Blue Jays
-                    </h3>
-                    <div class="date">6/15/16</div>
-                    <div class="caption">
-                        <div class="col-sm-6 text-center">3</div>
-                        <div class="col-sm-6 text-center">11</div>
+
+            <% foreach (var game in games) { %>
+                <div class="col-md-4">
+                    <div class="thumbnail text-center gamebox">
+                        <h3><a href="GameDetails.aspx?GameID=<%= game.GameID %>">
+                            <%= game.WinTeam %> 
+                            -
+                            <%= game.LostTeam %>
+                        </a></h3>
+                        <div class="date"><%= game.GameDate %></div>
+                        <div class="caption">
+                            <div class="col-sm-6 text-center alert-success"><%= game.WinTeamScore %></div>
+                            <div class="col-sm-6 text-center alert-danger"><%= game.LostTeamScore %></div>
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                    <div class="clearfix"></div>
                 </div>
-            </div>
+            <% } %>
+
             <div class="clearfix"></div>
         </div>
     </div>

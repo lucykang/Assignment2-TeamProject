@@ -12,8 +12,6 @@ namespace comp2007_s2016_team_proj
     public partial class GameRegister : System.Web.UI.Page
     {
 
-        private Game game;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack && Request.QueryString.Count > 0)
@@ -27,7 +25,7 @@ namespace comp2007_s2016_team_proj
             int gameID = Convert.ToInt32(Request.QueryString["GameID"]);
             using (DefaultConnection db = new DefaultConnection())
             {
-                game = (from gameList in db.Games
+                Game game = (from gameList in db.Games
                         where gameList.GameID == gameID
                         select gameList).FirstOrDefault();
 
@@ -65,26 +63,37 @@ namespace comp2007_s2016_team_proj
         {
             using (DefaultConnection db = new DefaultConnection())
             {
-                game = new Game()
+                Game game = null;
+                int gameID = Convert.ToInt32(Request.QueryString["GameID"]);
+
+                if (gameID >= 0)
                 {
-                    // save game information
-                    Name = Name.Text,
-                    GameDate = Convert.ToDateTime(Date.Text),
-                    GameDescription = Description.Text,
-                    NumSpectators = Convert.ToInt32(SpecatorCount.Text),
+                    game = (from gameList in db.Games
+                            where gameList.GameID == gameID
+                            select gameList).FirstOrDefault();
+                }
+                if(game == null)
+                {
+                    game = new Game();
+                }
 
-                    // save winning team information
-                    WinTeam = WinTeamName.Text,
-                    WinTeamScore = Convert.ToInt32(WinTeamScore.Text),
-                    WinTeamDescription = WinTeamDescription.Text,
+                // save game information
+                game.Name = Name.Text;
+                game.GameDate = Convert.ToDateTime(Date.Text);
+                game.GameDescription = Description.Text;
+                game.NumSpectators = Convert.ToInt32(SpecatorCount.Text);
 
-                    // save losing team information
-                    LostTeam = LoseTeamName.Text,
-                    LostTeamScore = Convert.ToInt32(LoseTeamScore.Text),
-                    LostTeamDescription = LoseTeamDescription.Text
-                };
+                // save winning team information
+                game.WinTeam = WinTeamName.Text;
+                game.WinTeamScore = Convert.ToInt32(WinTeamScore.Text);
+                game.WinTeamDescription = WinTeamDescription.Text;
 
-                if (Request.QueryString.Count <= 0)
+                // save losing team information
+                game.LostTeam = LoseTeamName.Text;
+                game.LostTeamScore = Convert.ToInt32(LoseTeamScore.Text);
+                game.LostTeamDescription = LoseTeamDescription.Text;
+
+                if (gameID < 0)
                 {
                     db.Games.Add(game);
                 }
