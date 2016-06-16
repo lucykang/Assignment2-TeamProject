@@ -15,7 +15,7 @@ namespace comp2007_s2016_team_proj
     public partial class GameDetails : System.Web.UI.Page
     {
 
-        private int gameID;
+        public int gameID;
 
         protected void Page_Load(object sender, EventArgs e)
         {
