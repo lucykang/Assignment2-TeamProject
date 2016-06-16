@@ -64,28 +64,16 @@ namespace comp2007_s2016_team_proj
                 GameDetailsView.DataSource = games.ToList();
                 GameDetailsView.DataBind();
             }
-            /*
-            using (DefaultConnection teamdb = new DefaultConnection())
-            {
-                var Team = (from team in teamdb.Teams
-                            select team);
-
-                
-                GameDetailsView.DataSource = Team.AsQueryable().ToList();
-                GameDetailsView.DataBind();
-            }
-            */
 
         }
 
         // The id parameter should match the DataKeyNames value set on the control
-        // or be decorated with a value provider attribute, e.g. [QueryString]int id
-        //public IQueryable<Game> TeamDetailsView_GetItem([QueryString("GameID")] int? gameId
+        // or be decorated with a value provider attribute, e.g. [QueryString]int gameId
+        // can be declared with this method heading too: public IQueryable<Game> TeamDetailsView_GetItem([QueryString("GameID")] int? gameId
         public IQueryable<Game> TeamDetailsView_GetItem()
         {
             var _db = new comp2007_s2016_team_proj.Models.DefaultConnection();
             IQueryable<Game> query = _db.Games;
-            //int gameID = 4000;
 
             query = query.Where(targetGame => targetGame.GameID == gameID);
             return query;
