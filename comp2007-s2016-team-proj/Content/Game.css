@@ -1,0 +1,12 @@
+﻿.gamebox .date {
+    color: #A0A0A0;
+    font-style: italic;
+}
+
+.gamebox .caption {
+    border-top: 1px solid #A0A0A0;
+}
+
+.gamebox .caption div:first-child {
+    border-right: 1px solid #A0A0A0;
+}

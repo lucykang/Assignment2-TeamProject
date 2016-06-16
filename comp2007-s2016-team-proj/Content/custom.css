@@ -18,6 +18,7 @@ body{
 
 .panel {
 	background-color: rgba(255, 255, 255, 0.7);
+    padding: 8px;
     /*font-family: raleway_thin-webfont;*/
 }
 
@@ -77,4 +78,15 @@ body{
 /* Game Details Page */
 .table, .table-borderless td, .table-borderless th{
     border: none !important;
+}
+
+.jumbotron .page-header {
+    border-bottom: 1px solid #A0A0A0;
+}
+
+.clearfix {
+    display: block;
+    width: 100%;
+    visibility: hidden;
+    clear: both;
 }

@@ -14,8 +14,17 @@ namespace comp2007_s2016_team_proj
 {
     public partial class GameDetails : System.Web.UI.Page
     {
+
+        public int gameID;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            // if not providing a gameID then leave
+            if(Request.QueryString.Count <= 0)
+            {
+                Response.Redirect("MainGamePage.aspx");
+                return;
+            }
             //if loading the page for the first time, populate the game detailsview
             if (!IsPostBack)
             {
@@ -34,17 +43,25 @@ namespace comp2007_s2016_team_proj
          */
         protected void GetGameDetail()
         {
+            gameID = Convert.ToInt32(Request.QueryString["GameID"]);
             // connect to EF
             using (DefaultConnection db = new DefaultConnection())
             {
                 // query the game details using EF and LINQ
-                var Game = (from game in db.Games
-                                //join team in db.Teams on game.WinTeam equals team.TeamID
-                                //where game.LostTeam == team.TeamID
-                            select game);//new { GameName = game.Name, WinTeamName = game.WinTeam.Name });
-                
+                var games = (from gameList in db.Games
+                            //join team in db.Teams on game.WinTeam equals team.TeamID
+                            //where game.LostTeam == team.TeamID
+                        where gameList.GameID == gameID
+                        select gameList);//new { GameName = game.Name, WinTeamName = game.WinTeam.Name });
+
+                if (games == null || games.Count() == 0)
+                {
+                    Response.Redirect("MainGamePage.aspx");
+                    return;
+                }
+
                 // bind the result to the GridView
-                GameDetailsView.DataSource = Game.AsQueryable().ToList();
+                GameDetailsView.DataSource = games.ToList();
                 GameDetailsView.DataBind();
             }
             /*
@@ -58,7 +75,7 @@ namespace comp2007_s2016_team_proj
                 GameDetailsView.DataBind();
             }
             */
-            
+
         }
 
         // The id parameter should match the DataKeyNames value set on the control
@@ -66,12 +83,11 @@ namespace comp2007_s2016_team_proj
         //public IQueryable<Game> TeamDetailsView_GetItem([QueryString("GameID")] int? gameId
         public IQueryable<Game> TeamDetailsView_GetItem()
         {
-            
             var _db = new comp2007_s2016_team_proj.Models.DefaultConnection();
             IQueryable<Game> query = _db.Games;
             //int gameID = 4000;
 
-            query = query.Where(game => game.GameID == 4001);
+            query = query.Where(targetGame => targetGame.GameID == gameID);
             return query;
         }
     }

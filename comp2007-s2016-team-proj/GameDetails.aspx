@@ -5,11 +5,12 @@
         Authors: Lucy, John
         Purpose: This page will display detailed view of selected game.
         Date Created: 06/13/16
-        Last Modified: 06/13/16
+        Last Modified: 06/15/16
     -->
     <div class="main">
         <div class="">
             <h1>Game Details</h1>
+            <a href="GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-success"><i class="fa fa-pencil"></i></a>
             <br />
             <div class="row">
                 <div class="col-md-6 panel">
