@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="Date">Date:</label>
-                <asp:TextBox CssClass="form-control" ID="Date" TextMode="Date" required="true" runat="server" />
+                <asp:TextBox CssClass="form-control" ID="Date" placeholder="yyyy-MM-dd" TextMode="Date" required="true" runat="server" />
             </div>
             <div class="form-group">
                 <label class="control-label" for="SpecatorCount">How many Spectators:</label>
