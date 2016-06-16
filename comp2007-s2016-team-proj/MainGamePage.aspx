@@ -26,7 +26,7 @@
                             -
                             <%= game.LostTeam %>
                         </a></h3>
-                        <div class="date"><%= game.GameDate %></div>
+                        <div class="date"><%= game.GameDate.ToString("ddd, MMM dd yyyy") %></div>
                         <div class="caption">
                             <div class="col-sm-6 text-center alert-success"><%= game.WinTeamScore %></div>
                             <div class="col-sm-6 text-center alert-danger"><%= game.LostTeamScore %></div>

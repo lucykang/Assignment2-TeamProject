@@ -63,19 +63,17 @@ namespace comp2007_s2016_team_proj
         {
             using (DefaultConnection db = new DefaultConnection())
             {
-                Game game = null;
-                int gameID = Convert.ToInt32(Request.QueryString["GameID"]);
-
-                if (gameID >= 0)
+                // find out whether we're editing or making a new one then retrieve the object
+                Game game;
+                if (Request.QueryString.Count > 0)
                 {
+                    int gameID = Convert.ToInt32(Request.QueryString["GameID"]);
                     game = (from gameList in db.Games
                             where gameList.GameID == gameID
                             select gameList).FirstOrDefault();
                 }
-                if(game == null)
-                {
+                else
                     game = new Game();
-                }
 
                 // save game information
                 game.Name = Name.Text;
@@ -93,7 +91,7 @@ namespace comp2007_s2016_team_proj
                 game.LostTeamScore = Convert.ToInt32(LoseTeamScore.Text);
                 game.LostTeamDescription = LoseTeamDescription.Text;
 
-                if (gameID < 0)
+                if (Request.QueryString.Count <= 0)
                 {
                     db.Games.Add(game);
                 }
