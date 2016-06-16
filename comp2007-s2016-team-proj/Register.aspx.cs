@@ -28,8 +28,8 @@ namespace comp2007_s2016_team_proj
             {
                 // populate a student object instance with the StudentID from the URL Parameter
                 User updatedUser = (from user in db.Users
-                                          where user.UserID == UserID
-                                          select user).FirstOrDefault();
+                                    where user.UserID == UserID
+                                    select user).FirstOrDefault();
 
                 // map the student properties to the form controls
                 if (updatedUser != null)

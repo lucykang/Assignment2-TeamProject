@@ -18,6 +18,7 @@
                     <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-striped table-borderless">
                         <Fields>
                             <asp:BoundField DataField="Name" HeaderText="Game: " />
+                            <asp:BoundField DataField="GameDate" HeaderText="Date: " DataFormatString="{0:MMM dd, yyyy}" />
                             <asp:BoundField DataField="GameDescription" HeaderText="Game Description: " />
                             <asp:BoundField DataField="NumSpectators" HeaderText="No. of Spectators: " />
                             <asp:BoundField DataField="WinTeam" HeaderText="Winning Team: " />
