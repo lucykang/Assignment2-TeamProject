@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="comp2007_s2016_team_proj.Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Content/Default.css" rel="stylesheet" />
 </asp:Content>
@@ -14,61 +15,43 @@
     </div>
     <div class="row text-center">
         <div class="col-sm-4">
-          <i class="fa fa-5x fa-lock"></i>
-          <h2>Login</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="Login.aspx">Login &raquo;</a></p>
+            <i class="fa fa-5x fa-lock"></i>
+            <h2>Login</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-default" href="Login.aspx">Login &raquo;</a></p>
         </div>
         <div class="col-sm-4">
-          <i class="fa fa-5x fa-pencil-square-o"></i>
-          <h2>Register</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="Register.aspx">Get Started &raquo;</a></p>
+            <i class="fa fa-5x fa-pencil-square-o"></i>
+            <h2>Register</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-default" href="Register.aspx">Get Started &raquo;</a></p>
         </div>
         <div class="col-sm-4">
-          <i class="fa fa-5x fa-users"></i>
-          <h2>Guest</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="MainGamePage.aspx">Get Started &raquo;</a></p>
+            <i class="fa fa-5x fa-users"></i>
+            <h2>Guest</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-default" href="MainGamePage.aspx">Get Started &raquo;</a></p>
         </div>
-      </div>
+    </div>
 
 
-      <!-- START THE FEATURETTES -->
+    <!-- START THE FEATURETTES -->
+    <% int i = 0; %>
+    <% foreach (var game in previousGames)
+        { %>
+    <hr class="featurette-divider">
 
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <div class="row featurette">
+        <div class="col-md-7 <%= (i++ % 2 == 0 ? "" : "col-md-offset-5") %>">
+            <h2 class="featurette-heading"><%= game.WinTeam %> VS <%= game.LostTeam %>
+                <span class="text-muted"><%= game.GameDate.ToString("ddd, MMM dd yyyy") %></span>
+            </h2>
+            <p class="lead">
+                <%= game.WinTeamScore %> - <%= game.LostTeamScore %>
+                <br />
+                <%= game.GameDescription %>
+            </p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
+    </div>
+    <% } %>
 </asp:Content>
