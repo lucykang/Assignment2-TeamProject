@@ -33,9 +33,7 @@
     <form id="form1" runat="server">
         <bs3:Navbar runat="server"></bs3:Navbar>
         <div id="fullback" runat="server">
-        <div class="container">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
-        </div>
         </div>
     </form>
 </body>

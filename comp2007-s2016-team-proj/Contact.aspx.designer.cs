@@ -7,22 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace comp2007_s2016_team_proj
-{
-
-
-    public partial class Contact
-    {
-
+namespace comp2007_s2016_team_proj {
+    
+    
+    public partial class Contact {
+        
         /// <summary>
-        /// Firstname control.
+        /// FullNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Firstname;
-
+        protected global::System.Web.UI.WebControls.TextBox FullNameTextBox;
+        
         /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
@@ -31,16 +29,16 @@ namespace comp2007_s2016_team_proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
+        
         /// <summary>
-        /// Lastname control.
+        /// CompanyTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Lastname;
-
+        protected global::System.Web.UI.WebControls.TextBox CompanyTextBox;
+        
         /// <summary>
         /// RequiredFieldValidator2 control.
         /// </summary>
@@ -49,16 +47,16 @@ namespace comp2007_s2016_team_proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-
+        
         /// <summary>
-        /// Email control.
+        /// EmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
-
+        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
+        
         /// <summary>
         /// RequiredFieldValidator3 control.
         /// </summary>
@@ -67,25 +65,16 @@ namespace comp2007_s2016_team_proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-
+        
         /// <summary>
-        /// Phone control.
+        /// PhoneNumberTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Phone;
-
-        /// <summary>
-        /// Message control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Message;
-
+        protected global::System.Web.UI.WebControls.TextBox PhoneNumberTextBox;
+        
         /// <summary>
         /// RequiredFieldValidator4 control.
         /// </summary>
@@ -94,14 +83,41 @@ namespace comp2007_s2016_team_proj
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-
+        
         /// <summary>
-        /// Submit control.
+        /// MessageTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Submit;
+        protected global::System.Web.UI.WebControls.TextBox MessageTextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
+        
+        /// <summary>
+        /// SubmitBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SubmitBtn;
+        
+        /// <summary>
+        /// ResetBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ResetBtn;
     }
 }

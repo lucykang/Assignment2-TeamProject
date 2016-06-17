@@ -30,7 +30,7 @@
                     <asp:PlaceHolder ID="AdminPlaceHolder" runat="server">
                         <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-lg fa-trophy"></i> Users</a></li>
                     </asp:PlaceHolder>
-                    <li id="logout" runat="server"><a href="Logout.aspx"><i class="fa fa-lg fa-sign-out"></i> Logout</a></li>
+                    <li id="logout" runat="server"><a href="../Logout.aspx"><i class="fa fa-lg fa-sign-out"></i> Logout</a></li>
                 </asp:PlaceHolder>
 
                 <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
@@ -38,7 +38,7 @@
                     <li id="edit" runat="server"><a href="Register.aspx"><i class="fa fa-lg fa-pencil-square-o"></i> Register</a></li>
                 </asp:PlaceHolder>
 
-                <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-lg fa-phone"></i> Contact</a></li>
+                <li id="contact" runat="server"><a href="../Contact.aspx"><i class="fa fa-lg fa-phone"></i> Contact</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

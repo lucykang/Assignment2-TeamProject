@@ -19,5 +19,10 @@ namespace comp2007_s2016_team_proj
             // TODO: Add email processing code
             Response.Redirect("/");
         }
+
+        protected void ResetBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
