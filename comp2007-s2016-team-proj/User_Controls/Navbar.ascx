@@ -4,7 +4,7 @@
     Authors: Lucy, John
     Purpose: Navbar that will be used to navigate between pages
     Date Created: 06/04/16
-    Last Modified: 06/15/16
+    Last Modified: 06/17/16
     -->
 <nav class="navbar navbar-transparent" role="navigation">
     <div class="container">
@@ -24,9 +24,19 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li id="home" runat="server"><a href="/"><i class="fa fa-lg fa-home"></i> Home</a></li>
-                <li id="game" runat="server"><a href="MainGamePage.aspx"><i class="fa fa-lg fa-trophy"></i> Game</a></li>
-                <li id="login" runat="server"><a href="Login.aspx"><i class="fa fa-lg fa-user"></i> Login</a></li>
-                <li id="edit" runat="server"><a href="Register.aspx"><i class="fa fa-lg fa-pencil-square-o"></i> Register</a></li>
+                
+                <asp:PlaceHolder ID="RegUserPlaceHolder" runat="server">
+                    <li id="game" runat="server"><a href="MainGamePage.aspx"><i class="fa fa-lg fa-trophy"></i> Game</a></li>
+                    <asp:PlaceHolder ID="AdminPlaceHolder" runat="server">
+                        <li id="users" runat="server"><a href="Users.aspx"><i class="fa fa-lg fa-trophy"></i> Users</a></li>
+                    </asp:PlaceHolder>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
+                    <li id="login" runat="server"><a href="Login.aspx"><i class="fa fa-lg fa-user"></i> Login</a></li>
+                    <li id="edit" runat="server"><a href="Register.aspx"><i class="fa fa-lg fa-pencil-square-o"></i> Register</a></li>
+                </asp:PlaceHolder>
+
                 <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-lg fa-phone"></i> Contact</a></li>
             </ul>
         </div>
