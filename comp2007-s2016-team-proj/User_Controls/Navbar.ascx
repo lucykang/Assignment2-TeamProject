@@ -28,8 +28,9 @@
                 <asp:PlaceHolder ID="RegUserPlaceHolder" runat="server">
                     <li id="game" runat="server"><a href="MainGamePage.aspx"><i class="fa fa-lg fa-trophy"></i> Game</a></li>
                     <asp:PlaceHolder ID="AdminPlaceHolder" runat="server">
-                        <li id="users" runat="server"><a href="Users.aspx"><i class="fa fa-lg fa-trophy"></i> Users</a></li>
+                        <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-lg fa-trophy"></i> Users</a></li>
                     </asp:PlaceHolder>
+                    <li id="logout" runat="server"><a href="Logout.aspx"><i class="fa fa-lg fa-sign-out"></i> Logout</a></li>
                 </asp:PlaceHolder>
 
                 <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">

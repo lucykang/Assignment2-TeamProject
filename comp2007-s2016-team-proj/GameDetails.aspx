@@ -8,9 +8,9 @@
         Last Modified: 06/15/16
     -->
     <div class="main">
-        <div class="">
+        <div class="panel">
             <h1>Game Details</h1>
-            <a href="GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+            <a href="/UserMenu/GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-success"><i class="fa fa-pencil"></i></a>
             <br />
             <div class="row">
                 <!-- Game details -->

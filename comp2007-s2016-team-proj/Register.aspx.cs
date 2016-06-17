@@ -22,6 +22,7 @@ namespace comp2007_s2016_team_proj
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
+            
             //create a new userStore and userManager object
             var userStore = new UserStore<IdentityUser>();
             var userManager = new UserManager<IdentityUser>(userStore); //user manager takes care of users
@@ -45,7 +46,7 @@ namespace comp2007_s2016_team_proj
                 authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
                 //redirect user to the main menu page
-                Response.Redirect("~/Contoso/MainMenu.aspx");
+                Response.Redirect("~/MainGamePage.aspx");
             }
             else
             {

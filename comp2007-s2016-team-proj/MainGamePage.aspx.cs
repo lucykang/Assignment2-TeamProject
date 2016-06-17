@@ -24,7 +24,7 @@ namespace comp2007_s2016_team_proj
 
         private void FetchGames()
         {
-            using (DefaultConnection db = new DefaultConnection())
+            using (BaseTrackerConnection db = new BaseTrackerConnection())
             {
                 games = (from gameList in db.Games
                          orderby gameList.GameDate descending

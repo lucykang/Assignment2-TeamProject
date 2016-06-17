@@ -22,7 +22,6 @@
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/custom.css" rel="stylesheet" />
-    <link href="Content/Default.css" rel="stylesheet" />
 
     <script src="Scripts/jquery-2.2.3.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>

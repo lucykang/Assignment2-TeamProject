@@ -45,7 +45,7 @@ namespace comp2007_s2016_team_proj
         {
             gameID = Convert.ToInt32(Request.QueryString["GameID"]);
             // connect to EF
-            using (DefaultConnection db = new DefaultConnection())
+            using (BaseTrackerConnection db = new BaseTrackerConnection())
             {
                 // query the game details using EF and LINQ
                 var games = (from gameList in db.Games
@@ -72,7 +72,7 @@ namespace comp2007_s2016_team_proj
         // can be declared with this method heading too: public IQueryable<Game> TeamDetailsView_GetItem([QueryString("GameID")] int? gameId
         public IQueryable<Game> TeamDetailsView_GetItem()
         {
-            var _db = new comp2007_s2016_team_proj.Models.DefaultConnection();
+            var _db = new comp2007_s2016_team_proj.Models.BaseTrackerConnection();
             IQueryable<Game> query = _db.Games;
 
             query = query.Where(targetGame => targetGame.GameID == gameID);

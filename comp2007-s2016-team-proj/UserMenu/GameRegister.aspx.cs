@@ -23,7 +23,7 @@ namespace comp2007_s2016_team_proj
         private void FetchGame()
         {
             int gameID = Convert.ToInt32(Request.QueryString["GameID"]);
-            using (DefaultConnection db = new DefaultConnection())
+            using (BaseTrackerConnection db = new BaseTrackerConnection())
             {
                 Game game = (from gameList in db.Games
                         where gameList.GameID == gameID
@@ -61,7 +61,7 @@ namespace comp2007_s2016_team_proj
 
         protected void Save_Click(object sender, EventArgs e)
         {
-            using (DefaultConnection db = new DefaultConnection())
+            using (BaseTrackerConnection db = new BaseTrackerConnection())
             {
                 // find out whether we're editing or making a new one then retrieve the object
                 Game game;

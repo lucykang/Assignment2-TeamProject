@@ -16,7 +16,7 @@ namespace comp2007_s2016_team_proj
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (DefaultConnection db = new DefaultConnection())
+            using (BaseTrackerConnection db = new BaseTrackerConnection())
             {
                 previousGames = (from gameList in db.Games
                                  orderby gameList.GameDate descending

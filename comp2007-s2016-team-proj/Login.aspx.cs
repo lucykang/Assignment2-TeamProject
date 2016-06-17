@@ -39,7 +39,7 @@ namespace comp2007_s2016_team_proj
                 authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
                 //redirect to the main menu page
-                Response.Redirect("~/Contoso/MainMenu.aspx");
+                Response.Redirect("~/MainGamePage.aspx");
             }
             else
             {

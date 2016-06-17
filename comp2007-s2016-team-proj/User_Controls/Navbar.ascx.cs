@@ -23,10 +23,14 @@ namespace comp2007_s2016_team_proj
                     RegUserPlaceHolder.Visible = true;
                     PublicPlaceHolder.Visible = false;
 
-                    //if user's name is admin, show users page as well.
-                    if (HttpContext.Current.User.Identity.Name == "admin")
+                    //if user's username is admin, show users page as well.
+                    if (HttpContext.Current.User.Identity.GetUserName() == "admin")
                     {
                         AdminPlaceHolder.Visible = true;
+                    }
+                    else //if user is regular user, then don't show the users page
+                    {
+                        AdminPlaceHolder.Visible = false;
                     }
                 }
                 else
