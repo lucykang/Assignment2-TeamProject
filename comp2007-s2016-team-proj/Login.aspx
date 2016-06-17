@@ -5,9 +5,10 @@
         Purpose: This page will allow the user to login to their account 
             - a button to renavigate to the register page if they don't have one
         Date Created: 06/04/16
-        Last Modified: 06/11/16
+        Last Modified: 06/17/16
     -->
     <div class="main">
+        <div class="row">
             <div class="wrapper">
                 <div class="form-signin panel">
                     <h3 class="form-signin-heading text-center">
@@ -15,6 +16,11 @@
                     </h3>
                     <hr>
                     <h3 class="form-signin-heading text-center">Log In</h3><br>
+                    <!-- alert message -->
+                    <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
+                        <asp:Label runat="server" ID="StatusLabel" />
+                    </div>
+                    <!-- form start -->
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon" id="username-addon"><i class="fa fa-user"></i></span>
@@ -32,13 +38,10 @@
                     </div>
                     <div class="form-group text-center">
                         <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-submit" Text="Login" CausesValidation="true" OnClick="LoginBtn_Click"/>
-                    <asp:Button Text="Register" ID="RegisterBtn" CssClass="btn btn-register" runat="server" UseSubmitBehavior="false" CausesValidation="false" OnClick="RegisterBtn_Click" />
+                        <asp:Button Text="Register" ID="RegisterBtn" CssClass="btn btn-register" runat="server" UseSubmitBehavior="false" CausesValidation="false" OnClick="RegisterBtn_Click" />
                     </div>
-                    
-                    <p>
-                        <asp:Label ID="MsgLabel" ForeColor="Red" runat="server" />
-                    </p>
                 </div>
             </div> <!-- end of wrapper -->
+        </div>
     </div> <!-- end of main -->
 </asp:Content>

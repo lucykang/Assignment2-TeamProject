@@ -7,7 +7,6 @@
       <Diagram DiagramId="b952ad05d30c438294e34a62c7bab18f" Name="Diagram1">
         <EntityTypeShape EntityType="LucyDBModel.Game" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LucyDBModel.Team" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LucyDBModel.User" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

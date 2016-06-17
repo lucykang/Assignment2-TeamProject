@@ -6,6 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.ModelBinding;
 using comp2007_s2016_team_proj.Models;
+//required for Identity and OWIN
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 
 namespace comp2007_s2016_team_proj
 {
@@ -18,26 +22,29 @@ namespace comp2007_s2016_team_proj
 
         protected void LoginBtn_Click(object sender, EventArgs e)
         {
-            //use EF to connect to the server
-            using (DefaultConnection db = new DefaultConnection())
+            //create a new userStore and userManager object
+            var userStore = new UserStore<IdentityUser>();
+            var userManager = new UserManager<IdentityUser>(userStore); //user manager takes care of users
+
+            //find the user
+            var user = userManager.Find(UsernameTextBox.Text, PasswordTextBox.Text);
+
+            //check if the user is exist
+            if (user != null)
             {
-                User loginUser;
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
-                //get the user record from db
-                loginUser = (from user in db.Users
-                             where user.Username == UsernameTextBox.Text
-                             select user).FirstOrDefault();
+                //signing in the user
+                authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
-                //if there was no such user found or password doesn't match, show message.
-                if(loginUser == null || loginUser.Password != PasswordTextBox.Text)
-                {
-                    MsgLabel.Text = "Invalid credentials. Please try again.";
-                }
-                else
-                {
-                    Response.Redirect("~/MainGamePage.aspx");
-                }
-                
+                //redirect to the main menu page
+                Response.Redirect("~/Contoso/MainMenu.aspx");
+            }
+            else
+            {
+                StatusLabel.Text = "Invalid Username or/and Password";
+                AlertFlash.Visible = true;
             }
         }
 

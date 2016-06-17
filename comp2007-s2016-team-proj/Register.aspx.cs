@@ -6,6 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.ModelBinding;
 using comp2007_s2016_team_proj.Models;
+//required for Identity and OWIN
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 
 namespace comp2007_s2016_team_proj
 {
@@ -13,80 +17,41 @@ namespace comp2007_s2016_team_proj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if((!IsPostBack) && Request.QueryString.Count > 0){
-                this.GetUser();
-            }
-        }
-
-        /**
-         * <summary>
-         * This method gets the user data from the DB
-         * </summary>
-         * 
-         * @method GetUser
-         * @returns {void}
-         */
-        protected void GetUser()
-        {
-            // populate teh form with existing data from the database
-            int UserID = Convert.ToInt32(Request.QueryString["UserID"]);
-
-            // connect to the EF DB
-            using (DefaultConnection db = new DefaultConnection())
-            {
-                // populate a student object instance with the StudentID from the URL Parameter
-                User updatedUser = (from user in db.Users
-                                    where user.UserID == UserID
-                                    select user).FirstOrDefault();
-
-                // map the student properties to the form controls
-                if (updatedUser != null)
-                {
-                    UsernameTextBox.Text = updatedUser.Username;
-                    PasswordTextBox.Text = updatedUser.Password;
-                    LastNameTextBox.Text = updatedUser.LastName;
-                    FirstNameTextBox.Text = updatedUser.FirstName;
-                    EmailTextBox.Text = updatedUser.Email;
-                }
-            }
+            
         }
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
-            using(DefaultConnection db = new DefaultConnection())
+            //create a new userStore and userManager object
+            var userStore = new UserStore<IdentityUser>();
+            var userManager = new UserManager<IdentityUser>(userStore); //user manager takes care of users
+
+            //create a new user object
+            var user = new IdentityUser() //constructor structure
             {
-                User newUser = new Models.User();
-                int UserID = 0;
+                UserName = UsernameTextBox.Text,
+                Email = EmailTextBox.Text
+            };
 
-                //if there was a querystring in the URL
-                if(Request.QueryString.Count > 0)
-                {
-                    //get the id from the URL
-                    UserID = Convert.ToInt32(Request.QueryString["UserID"]);
-                    //get the user from EF
-                    newUser = (from user in db.Users
-                               where user.UserID == UserID
-                               select user).FirstOrDefault();
-                }
+            //get result of created user
+            IdentityResult result = userManager.Create(user, PasswordTextBox.Text); //hashes the password from the textbox and create the user with the password
 
-                //add form data to the new user record
-                newUser.Username = UsernameTextBox.Text;
-                newUser.Password = PasswordTextBox.Text;
-                newUser.FirstName = FirstNameTextBox.Text;
-                newUser.LastName = LastNameTextBox.Text;
-                newUser.Email = EmailTextBox.Text;
+            //check if user creation succeeded
+            if (result.Succeeded)
+            {
+                //authenticate and login new user
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
-                //use LINQ to ADO.NET to add/insert new user to the db
-                if(UserID == 0)
-                {
-                    db.Users.Add(newUser);
-                }
-
-                //save change
-                db.SaveChanges();
-
-                //redirect to login page
-                Response.Redirect("~/Login.aspx");
+                //redirect user to the main menu page
+                Response.Redirect("~/Contoso/MainMenu.aspx");
+            }
+            else
+            {
+                //display errors in the alert-flash div
+                StatusLabel.Text = result.Errors.FirstOrDefault();
+                AlertFlash.Visible = true;
             }
         }
 

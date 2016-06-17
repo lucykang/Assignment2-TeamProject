@@ -27,6 +27,5 @@ namespace comp2007_s2016_team_proj.Models
     
         public virtual DbSet<Game> Games { get; set; }
         public virtual DbSet<Team> Teams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
     }
 }
