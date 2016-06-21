@@ -37,7 +37,7 @@
                 </div>
                 <!-- contact form -->
                 <div class="col-md-6 panel">
-                    <div class="page-header">
+                    <div class="page-header text-center">
                         <h1>Contact Us</h1>
                     </div>
                     <em>Please fill out all fields to send email to us.</em>

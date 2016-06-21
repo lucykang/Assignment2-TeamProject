@@ -12,7 +12,7 @@
     <div class="main">
         <div class="container">
             <div class="panel">
-                <div class="page-header">
+                <div class="page-header text-center">
                     <h1>Recent Games</h1>
                 </div>
                 <div style="margin-left: 15px; margin-bottom: 10px">
@@ -22,7 +22,7 @@
                     <% foreach (var game in games) { %>
                         <div class="col-md-4">
                             <div class="thumbnail text-center gamebox">
-                                <h3><a href="/UserMenu/GameDetails.aspx?GameID=<%= game.GameID %>">
+                                <h3><a href="/GameDetails.aspx?GameID=<%= game.GameID %>">
                                     <%= game.WinTeam %> 
                                     -
                                     <%= game.LostTeam %>

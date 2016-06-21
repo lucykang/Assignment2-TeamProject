@@ -24,9 +24,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li id="home" runat="server"><a href="/"><i class="fa fa-lg fa-home"></i> Home</a></li>
-                
+                <li id="game" runat="server"><a href="MainGamePage.aspx"><i class="fa fa-lg fa-trophy"></i> Game</a></li>
                 <asp:PlaceHolder ID="RegUserPlaceHolder" runat="server">
-                    <li id="game" runat="server"><a href="MainGamePage.aspx"><i class="fa fa-lg fa-trophy"></i> Game</a></li>
                     <asp:PlaceHolder ID="AdminPlaceHolder" runat="server">
                         <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-lg fa-trophy"></i> Users</a></li>
                     </asp:PlaceHolder>

@@ -1,25 +1,86 @@
-﻿.background-cover {
-    background-color: #FFFFFF;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+﻿html {
+  position: relative;
+  min-height: 100%;
 }
+
+body{
+    margin-bottom: 50px;
+    z-index: 3;
+    background-color: white;
+    font-family: 'Cutive Mono';
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Comfortaa';
+}
+
+.navbar-toggle> .icon-bar{
+    color: #338BDE;
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    margin-top: -12px;
+    /*
+    text-align: center;
+    font-size: 70px;
+    margin-top: 0px;
+    */
+}
+.navbar-transparent {
+    background-color: #FF9F19;
+}
+.navbar-transparent .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    color: #338BDE;
+    text-shadow: 10px;
+}
+.navbar-transparent .navbar-nav > li > a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.navbar-transparent .navbar-nav>.active>a,
+.navbar-transparent .navbar-nav>.active>a:focus,
+.navbar-transparent .navbar-nav>.active>a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .full {
     background: url(../Assets/Free-Baseball.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    z-index: 3;
 }
-.background-cover img {
-    width: 100%;
-    opacity: 0.65;
+
+.panel {
+	background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px 20px 20px 20px;
+    
+}
+
+.gamepanel{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.wrapper{
+    margin-top: 45px;
+}
+
+/* Button Style */
+.btn-submit {
+    background-color: #FF9F19;
+    color: white;
+}
+
+.btn-register {
+    background-color: #338BDE;
+    color: white;
 }

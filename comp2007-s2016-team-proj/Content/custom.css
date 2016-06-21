@@ -12,15 +12,23 @@ html {
 
 body{
     margin-bottom: 50px;
-    font-size: 12pt;
+    font-size: 13pt;
     background-color: #26C1FF;
-    
+    font-family: 'Cutive Mono';
+}
+
+h1, h2, h3, h4, h5, h6, label{
+    font-family: 'Comfortaa';
+    font-weight: 600;
 }
 
 .panel {
 	background-color: rgba(255, 255, 255, 0.7);
-    padding: 8px;
-    /*font-family: raleway_thin-webfont;*/
+    padding: 20px 20px 20px 20px;
+}
+
+.navbar-toggle> .icon-bar{
+    color: #338BDE;
 }
 
 .navbar-brand {
@@ -36,13 +44,15 @@ body{
 }
 .navbar-transparent {
     background-color: #FF9F19;
+    color: #338BDE;
 }
 .navbar-transparent .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px; 
-    /*font-family: raleway_thin-webfont;*/
+    font-family: 'Comfortaa';
     font-size: 15px;
     color: #338BDE;
+    text-shadow: 10px;
 }
 .navbar-transparent .navbar-nav>.active>a,
 .navbar-transparent .navbar-nav>.active>a:focus,
