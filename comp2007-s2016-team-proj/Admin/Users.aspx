@@ -7,7 +7,7 @@
                 <h1>Users</h1>
                 <a href="Register.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Register New User</a>
                 <asp:GridView runat="server" ID="UsersGridView" AutoGenerateColumns="false"
-                    CssClass="table table-bordered table-striped table-hover" OnRowDeleting="UsersGridView_RowDeleting" DataKeyNames="Id">
+                    CssClass="table table-bordered table-striped table-hover" DataKeyNames="Id">
                     <Columns>
                         <asp:BoundField DataField="UserName" HeaderText="User Name" Visible="true" />
                         <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" Visible="true" />

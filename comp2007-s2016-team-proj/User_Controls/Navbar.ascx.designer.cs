@@ -22,15 +22,6 @@ namespace comp2007_s2016_team_proj {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl home;
         
         /// <summary>
-        /// RegUserPlaceHolder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder RegUserPlaceHolder;
-        
-        /// <summary>
         /// game control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace comp2007_s2016_team_proj {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl game;
+        
+        /// <summary>
+        /// RegUserPlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder RegUserPlaceHolder;
         
         /// <summary>
         /// AdminPlaceHolder control.
@@ -85,13 +85,13 @@ namespace comp2007_s2016_team_proj {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl login;
         
         /// <summary>
-        /// edit control.
+        /// register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl edit;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl register;
         
         /// <summary>
         /// contact control.
