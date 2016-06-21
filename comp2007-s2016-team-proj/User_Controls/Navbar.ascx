@@ -36,7 +36,7 @@
 
                 <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
                     <li id="login" runat="server"><a href="/Login.aspx"><i class="fa fa-lg fa-user"></i> Login</a></li>
-                    <li id="register" runat="server"><a href="/Register.aspx"><i class="fa fa-lg fa-pencil-square-o"></i> Register</a></li>
+                    <li id="edit" runat="server"><a href="/Register.aspx"><i class="fa fa-lg fa-pencil-square-o"></i> Register</a></li>
                 </asp:PlaceHolder>
 
                 <li id="contact" runat="server"><a href="../Contact.aspx"><i class="fa fa-lg fa-phone"></i> Contact</a></li>

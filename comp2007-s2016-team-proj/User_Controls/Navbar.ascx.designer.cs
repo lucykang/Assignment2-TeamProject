@@ -85,13 +85,13 @@ namespace comp2007_s2016_team_proj {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl login;
         
         /// <summary>
-        /// register control.
+        /// edit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl register;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl edit;
         
         /// <summary>
         /// contact control.

@@ -2,12 +2,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
+        <div class="panel">
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
+            <div class="col-md-offset-2 col-md-8 panel">
                 <h1>Users</h1>
-                <a href="Register.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Register New User</a>
+                <a href="../Register.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Register New User</a>
                 <asp:GridView runat="server" ID="UsersGridView" AutoGenerateColumns="false"
-                    CssClass="table table-bordered table-striped table-hover" DataKeyNames="Id">
+                    CssClass="table table-striped table-borderless" OnRowDeleting="UsersGridView_RowDeleting" DataKeyNames="Id">
                     <Columns>
                         <asp:BoundField DataField="UserName" HeaderText="User Name" Visible="true" />
                         <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" Visible="true" />
@@ -21,5 +22,6 @@
                 </asp:GridView>
             </div>
         </div>
+            </div>
     </div>
 </asp:Content>
