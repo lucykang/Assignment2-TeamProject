@@ -13,13 +13,20 @@ namespace comp2007_s2016_team_proj
     public partial class Contact : System.Web.UI.Page
     {
 
+        // holds the client information
         private SmtpClient client = null;
 
+        /**
+         * Runs when the page executes
+         */
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
+        /**
+         * Send out the emails when they click send
+         */
         protected void Submit_Click(object sender, EventArgs e)
         {
             string companyEmail = "basetracker8jl@gmail.com"; // placeholder for company email
@@ -31,6 +38,9 @@ namespace comp2007_s2016_team_proj
             Response.Redirect("/");
         }
 
+        /**
+         * Clears all the fields on screen
+         */
         protected void ResetBtn_Click(object sender, EventArgs e)
         {
             FullNameTextBox.Text = CompanyTextBox.Text = EmailTextBox.Text = PhoneNumberTextBox.Text = MessageTextBox.Text = "";
