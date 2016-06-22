@@ -5,7 +5,8 @@
     Purpose: Navbar that will be used to navigate between pages
     Date Created: 06/04/16
     Last Modified: 06/17/16
-    -->
+-->
+
 <nav class="navbar navbar-transparent" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +31,7 @@
                     <asp:PlaceHolder ID="AdminPlaceHolder" runat="server">
                         <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-lg fa-users"></i> Users</a></li>
                     </asp:PlaceHolder>
-                    <li id="myprofile" runat="server"><a href="/Register.aspx?Id=<%# HttpContext.Current.User.Identity.AuthenticationType. %>"><i class="fa fa-lg fa-pencil-square-o"></i> My Account</a></li>
+                    <li id="myprofile" runat="server"><a href="/Register.aspx?Id=<%= userID %>"><i class="fa fa-lg fa-pencil-square-o"></i> My Account</a></li>
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-lg fa-sign-out"></i> Logout</a></li>
                 </asp:PlaceHolder>
 

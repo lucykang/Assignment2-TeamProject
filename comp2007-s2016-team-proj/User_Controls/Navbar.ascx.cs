@@ -14,6 +14,9 @@ namespace comp2007_s2016_team_proj
 {
     public partial class Navbar : System.Web.UI.UserControl
     {
+
+        public string userID;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,6 +25,8 @@ namespace comp2007_s2016_team_proj
                 {
                     RegUserPlaceHolder.Visible = true;
                     PublicPlaceHolder.Visible = false;
+
+                    userID = HttpContext.Current.User.Identity.GetUserId();
 
                     //if user's username is admin, show users page as well.
                     if (HttpContext.Current.User.Identity.GetUserName() == "admin")
@@ -40,7 +45,7 @@ namespace comp2007_s2016_team_proj
                 }
             }
             SetActivePage();
-            myprofile.
+            
         }
 
         /**
