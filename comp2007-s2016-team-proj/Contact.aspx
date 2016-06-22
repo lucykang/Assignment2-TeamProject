@@ -76,7 +76,7 @@
                     </div>
                     <div class="text-center">
                         <asp:Button runat="server" ID="SubmitBtn" CssClass="btn btn-submit" Text="Submit" OnClick="Submit_Click" CausesValidation="true" />
-                        <asp:Button runat="server" ID="ResetBtn" CssClass="btn btn-reset" Text="Reset" OnClick="ResetBtn_Click" CausesValidation="false" />                        
+                        <asp:Button runat="server" ID="ResetBtn" CssClass="btn btn-reset" Text="Reset" OnClick="ResetBtn_Click" CausesValidation="false" UseSubmitBehavior="false" />                        
                     </div>
                 </div>
             </div> <!-- end of row -->
