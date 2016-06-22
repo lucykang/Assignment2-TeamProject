@@ -16,7 +16,7 @@
                     <h1>Recent Games</h1>
                 </div>
                 <div style="margin-left: 15px; margin-bottom: 10px">
-                    <a href="/UserMenu/GameRegister.aspx" class="btn btn-success"><i class="fa fa-lg fa-plus"></i></a>
+                    <a href="/UserMenu/GameRegister.aspx" class="btn btn-register"><i class="fa fa-lg fa-plus"></i> Add New Game</a>
                 </div>
                 <div runat="server" id="GameList">
                     <% foreach (var game in games) { %>

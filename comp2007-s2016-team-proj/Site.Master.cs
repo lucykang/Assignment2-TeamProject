@@ -22,13 +22,6 @@ namespace comp2007_s2016_team_proj
                     defaultcss.Visible = false;
                     break;
             }
-            /*
-            if (Page.Title == "User Registration")
-            {
-                //if the page is registration, add attribute.
-                //register.Attribute.Add("style", "margin-top: -30px;");
-            }
-            */
         }
     }
 }

@@ -10,3 +10,12 @@
 .gamebox .caption div:first-child {
     border-right: 1px solid #A0A0A0;
 }
+
+.gamebox .caption .alert-success {
+    background-image: linear-gradient(to bottom, #80f080 0, #80e580 100%);
+}
+
+.gamebox .caption .alert-danger {
+    background-image: linear-gradient(to bottom, #f04040 0, #e54040 100%);
+    color: #FFF;
+}

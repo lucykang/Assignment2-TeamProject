@@ -18,7 +18,6 @@
     <title></title>
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" /> 
-    <!-- this link is causing error <link href="https://bootswatch.com/slate/bootstrap.min.css" rel="stylesheet" />-->
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa|Cutive+Mono">
