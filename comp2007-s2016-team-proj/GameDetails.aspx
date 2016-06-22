@@ -10,12 +10,11 @@
     <div class="main">
         <div class="container">
             <div class="panel">
-                <h1>Game Details</h1>
-                <a href="/UserMenu/GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+                <h1 class="text-center">Game Details</h1>
                 <br />
                 <div class="row">
                     <!-- Game details -->
-                    <div class="col-md-6 panel">
+                    <div class="col-md-6 panel game-form">
                         <br />
                         <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-striped table-borderless">
                             <Fields>
@@ -27,10 +26,14 @@
                                 <asp:BoundField DataField="LostTeam" HeaderText="Lost Team: " />
                             </Fields>
                         </asp:DetailsView>
+                        <div class="text-center">
+                            <a href="/UserMenu/GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-submit"><i class="fa fa-pencil"></i> Edit</a>
+                        </div>
+                        
                     </div>
-                    <div class="col-md-1"></div>
+                    
                     <!-- Team details-->
-                    <div class="col-md-5">
+                    <div class="col-md-5 teams-form">
                         <asp:FormView ID="TeamDetailsView" runat="server" ItemType="comp2007_s2016_team_proj.Models.Game" SelectMethod="TeamDetailsView_GetItem" RenderOuterTable="false">
                             <ItemTemplate>
                                 <div class="row">

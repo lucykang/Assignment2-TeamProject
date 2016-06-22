@@ -25,17 +25,21 @@
                             <asp:TextBox runat="server" CssClass="form-control" ID="UsernameTextBox" placeholder="Username"></asp:TextBox>
                             <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="UsernameRequiredFieldValidator" runat="server" ErrorMessage="Username is required" ControlToValidate="UsernameTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label" for="PasswordTextBox">Password </label>
-                            <asp:TextBox runat="server" CssClass="form-control" ID="PasswordTextBox" placeholder="Password" TextMode="Password"></asp:TextBox>
-                            <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Password is required" ControlToValidate="PasswordTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="ConfirmPasswordTextBox">Confirm </label>
-                            <asp:TextBox runat="server" CssClass="form-control" ID="ConfirmPasswordTextBox" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
-                            <asp:CompareValidator ErrorMessage="Your Passwords Must Match" Type="String" Operator="Equal"  ControlToValidate="ConfirmPasswordTextBox" runat="server"
-                                    ControlToCompare="PasswordTextBox" CssClass="label label-danger" />
-                        </div>
+
+                        <!-- Only Display if New User is being Registered -->
+                        <asp:PlaceHolder ID="PasswordPlaceHolder" runat="server">
+                            <div class="form-group">
+                                <label class="control-label" for="PasswordTextBox">Password </label>
+                                <asp:TextBox runat="server" CssClass="form-control" ID="PasswordTextBox" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ForeColor="Red" Display="Dynamic" ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Password is required" ControlToValidate="PasswordTextBox" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="ConfirmPasswordTextBox">Confirm </label>
+                                <asp:TextBox runat="server" CssClass="form-control" ID="ConfirmPasswordTextBox" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
+                                <asp:CompareValidator ErrorMessage="Your Passwords Must Match" Type="String" Operator="Equal"  ControlToValidate="ConfirmPasswordTextBox" runat="server"
+                                        ControlToCompare="PasswordTextBox" CssClass="label label-danger" />
+                            </div>
+                        </asp:PlaceHolder>
                         <!--
                         <div class="form-group">
                             <label class="control-label" for="FirstNameTextBox">First Name</label>

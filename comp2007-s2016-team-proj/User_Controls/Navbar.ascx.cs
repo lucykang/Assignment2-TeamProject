@@ -40,6 +40,7 @@ namespace comp2007_s2016_team_proj
                 }
             }
             SetActivePage();
+            myprofile.
         }
 
         /**
@@ -71,6 +72,7 @@ namespace comp2007_s2016_team_proj
                     break;
                 case "User Detail":
                     edit.Attributes.Add("class", "active");
+                    myprofile.Attributes.Add("class", "active");
                     break;
                 case "Users":
                     users.Attributes.Add("class", "active");

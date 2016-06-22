@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6{
 
 .panel {
 	background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px 20px 20px 20px;
+    padding: 40px 20px 40px 20px;
     
 }
 
@@ -82,5 +82,10 @@ h1, h2, h3, h4, h5, h6{
 
 .btn-register {
     background-color: #338BDE;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #bd0f0f;
     color: white;
 }

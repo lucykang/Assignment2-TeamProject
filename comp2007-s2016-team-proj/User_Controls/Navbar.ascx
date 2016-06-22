@@ -30,7 +30,7 @@
                     <asp:PlaceHolder ID="AdminPlaceHolder" runat="server">
                         <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-lg fa-users"></i> Users</a></li>
                     </asp:PlaceHolder>
-
+                    <li id="myprofile" runat="server"><a href="/Register.aspx?Id=<%# HttpContext.Current.User.Identity.AuthenticationType. %>"><i class="fa fa-lg fa-pencil-square-o"></i> My Account</a></li>
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-lg fa-sign-out"></i> Logout</a></li>
                 </asp:PlaceHolder>
 

@@ -13,7 +13,7 @@ html {
 body{
     margin-bottom: 50px;
     font-size: 13pt;
-    background-color: #26C1FF;
+    background-color: #001d4a;
     font-family: 'Cutive Mono';
 }
 
@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5, h6, label{
     color: white;
 }
 
+.btn-cancel {
+    background-color: #bd0f0f;
+    color: white;
+}
 /* Login Page */
 .wrapper{
     margin-top: 45px;
@@ -89,6 +93,15 @@ h1, h2, h3, h4, h5, h6, label{
 /* Game Details Page */
 .table, .table-borderless td, .table-borderless th{
     border: none !important;
+}
+
+.game-form{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.teams-form{
+    margin-left: 20px;
 }
 
 .jumbotron .page-header {

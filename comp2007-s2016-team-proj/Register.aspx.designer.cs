@@ -58,6 +58,15 @@ namespace comp2007_s2016_team_proj {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UsernameRequiredFieldValidator;
         
         /// <summary>
+        /// PasswordPlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PasswordPlaceHolder;
+        
+        /// <summary>
         /// PasswordTextBox control.
         /// </summary>
         /// <remarks>
