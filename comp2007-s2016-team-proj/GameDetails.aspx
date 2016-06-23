@@ -28,6 +28,7 @@
                         </asp:DetailsView>
                         <div class="text-center">
                             <a href="/UserMenu/GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-submit"><i class="fa fa-pencil"></i> Edit</a>
+                            <a href="/UserMenu/GameDelete.aspx?GameID=<%= gameID %>" class="btn btn-cancel"><i class="fa fa-trash-o"></i> Delete</a>
                         </div>
                         
                     </div>
