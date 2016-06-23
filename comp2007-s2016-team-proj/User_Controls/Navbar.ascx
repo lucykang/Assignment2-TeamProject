@@ -16,7 +16,7 @@
                 <i class="fa fa-lg fa-bars"></i>
             </button>
             <a class="navbar-brand" href="/">
-                <img src="/Assets/logo.png" alt="Base Tracker" width="140"/>
+                <img src="/Assets/logo.png" alt="Base Tracker" height="48"/>
             </a>
         </div>
 
