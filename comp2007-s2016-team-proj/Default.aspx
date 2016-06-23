@@ -37,11 +37,10 @@
                 <!-- START THE FEATURETTES -->
                 <div class ="row panel gamepanel">
                     <% int i = 0; %>
-                    <% foreach (var game in previousGames)
-                        { %>
+                    <% foreach (var game in previousGames) { %>
                     
                     <div class="row featurette">
-                        <div class="col-md-7 <%= (i++ % 2 == 0 ? "" : "col-md-offset-5") %>">
+                        <div class="col-md-7 <%= (i % 2 == 0 ? "" : "col-md-push-5") %>">
                             <h2 class="featurette-heading"><%= game.WinTeam %> VS <%= game.LostTeam %>
                                 <span class="text-muted"><%= game.GameDate.ToString("ddd, MMM dd yyyy") %></span>
                             </h2>
@@ -50,6 +49,9 @@
                                 <br />
                                 <%= game.GameDescription %>
                             </p>
+                        </div>
+                        <div class="col-md-5 <%= (i++ % 2 == 0 ? "" : "col-md-pull-7") %>">
+                            <img src="Assets/GamePhotos/<%= game.GameID %>.jpg" style="max-width: 100%;" />
                         </div>
                     </div> <!-- end of row featurette -->
                     <hr class="featurette-divider">

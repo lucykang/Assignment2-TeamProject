@@ -129,6 +129,9 @@
     <Content Include="Assets\Baseball-macro.jpg" />
     <Content Include="Assets\Baseball-Wallpapers.jpg" />
     <Content Include="Assets\Free-Baseball.jpg" />
+    <Content Include="Assets\GamePhotos\4003.jpg" />
+    <Content Include="Assets\GamePhotos\4001.jpg" />
+    <Content Include="Assets\GamePhotos\4002.jpg" />
     <Content Include="Assets\icon.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Content\bootstrap-theme.css" />
