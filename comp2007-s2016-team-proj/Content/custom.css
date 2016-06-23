@@ -102,6 +102,21 @@ h1, h2, h3, h4, h5, h6, label{
     margin-left: 20px;
 }
 
+.panel .panel-primary > .panel-heading {
+    background-image: none;
+    color: white;
+    background-color: #338BDE;
+}
+
+.panel-danger, .panel-primary {
+    border-color: transparent;
+}
+.panel .panel-danger > .panel-heading {
+    background-image: none;
+    color: white;
+    background-color: #bd0f0f;
+}
+
 .jumbotron .page-header {
     border-bottom: 1px solid #A0A0A0;
 }
