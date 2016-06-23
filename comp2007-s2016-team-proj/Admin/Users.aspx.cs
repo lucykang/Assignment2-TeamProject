@@ -53,9 +53,11 @@ namespace comp2007_s2016_team_proj
                 AspNetUser deletedUser = (from users in db.AspNetUsers
                                           where users.Id == UserID
                                           select users).FirstOrDefault();
-
-                db.AspNetUsers.Remove(deletedUser);
-                db.SaveChanges();
+                if(deletedUser != null)
+                {
+                    db.AspNetUsers.Remove(deletedUser);
+                    db.SaveChanges();
+                }
             }
             // refresh the grid
             this.GetUsers();
