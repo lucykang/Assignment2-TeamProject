@@ -57,10 +57,26 @@ h1, h2, h3, h4, h5, h6, label{
 .navbar-transparent .navbar-nav>.active>a:hover{
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* Global */
+.jumbotron .page-header {
+    border-bottom: 1px solid #A0A0A0;
+}
+
+.clearfix {
+    display: block;
+    width: 100%;
+    visibility: hidden;
+    clear: both;
+}
+
 .error {
     background: #bd0f0f;
 }
 
+.panel-body > address> strong {
+    color: #338BDE;
+}
 /* Button Style */
 .btn-submit {
     background-color: #FF9F19;
@@ -117,13 +133,4 @@ h1, h2, h3, h4, h5, h6, label{
     background-color: #bd0f0f;
 }
 
-.jumbotron .page-header {
-    border-bottom: 1px solid #A0A0A0;
-}
 
-.clearfix {
-    display: block;
-    width: 100%;
-    visibility: hidden;
-    clear: both;
-}
