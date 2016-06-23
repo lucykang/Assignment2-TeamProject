@@ -19,14 +19,14 @@
                         </div>
                         <div class="panel-body">
                             <address>
-                                <strong>Lucy</strong><br />
+                                <strong class="text-danger">Lucy Kang</strong><br />
                                 1011 Georgian Drive<br />
                                 Barrie, ON L9L 2A6<br />
                                 <abbr title="Phone">P: </abbr>
                                 (705) 555-5163
                             </address>
                             <address>
-                                <strong>John Horne</strong><br />
+                                <strong class="text-primary">John Horne</strong><br />
                                 1 Toronto Drive<br />
                                 Barrie, ON L9L 1L0<br />
                                 <abbr title="Phone">P: </abbr>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <!-- contact form -->
-                <div class="col-md-6 panel">
+                <div class="col-md-8 panel">
                     <div class="page-header text-center">
                         <h1>Contact Us</h1>
                     </div>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="text-center">
                         <asp:Button runat="server" ID="SubmitBtn" CssClass="btn btn-submit" Text="Submit" OnClick="Submit_Click" CausesValidation="true" />
-                        <asp:Button runat="server" ID="ResetBtn" CssClass="btn btn-reset" Text="Reset" OnClick="ResetBtn_Click" CausesValidation="false" UseSubmitBehavior="false" />                        
+                        <asp:Button runat="server" ID="ResetBtn" CssClass="btn btn-cancel" Text="Reset" OnClick="ResetBtn_Click" CausesValidation="false" UseSubmitBehavior="false" />                        
                     </div>
                 </div>
             </div> <!-- end of row -->

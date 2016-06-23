@@ -68,8 +68,8 @@
                 </div>
         
                 <div class="text-right">
-                    <asp:Button Text="Cancel" ID="Cancel" runat="server" CssClass="btn btn-warning" UseSubmitBehavior="false" CausesValidation="false" OnClick="Cancel_Click" />
-                    <asp:Button Text="Save" ID="Save" runat="server" CssClass="btn btn-primary" OnClick="Save_Click" />
+                    <asp:Button Text="Cancel" ID="Cancel" runat="server" CssClass="btn btn-cancel" UseSubmitBehavior="false" CausesValidation="false" OnClick="Cancel_Click" />
+                    <asp:Button Text="Save" ID="Save" runat="server" CssClass="btn btn-submit" OnClick="Save_Click" />
                 </div>
 
                 <div class="clearfix"></div>
