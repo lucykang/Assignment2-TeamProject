@@ -38,7 +38,7 @@
                         <asp:FormView ID="TeamDetailsView" runat="server" ItemType="comp2007_s2016_team_proj.Models.Game" SelectMethod="TeamDetailsView_GetItem" RenderOuterTable="false">
                             <ItemTemplate>
                                 <div class="row">
-                                    <div class="panel panel-primary">
+                                    <div class="panel panel-primary ">
                                         <div class="panel-heading">
                                             <h4><%#:Item.WinTeam %></h4>
                                         </div>
