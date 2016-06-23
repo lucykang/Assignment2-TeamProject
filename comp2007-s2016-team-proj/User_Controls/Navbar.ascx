@@ -8,7 +8,7 @@
 -->
 
 <nav class="navbar navbar-transparent" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -16,7 +16,7 @@
                 <i class="fa fa-lg fa-bars"></i>
             </button>
             <a class="navbar-brand" href="/">
-                <img src="/Assets/logo.png" alt="Base Tracker" width="140" />
+                <img src="/Assets/logo.png" alt="Base Tracker" width="140"/>
             </a>
         </div>
 
