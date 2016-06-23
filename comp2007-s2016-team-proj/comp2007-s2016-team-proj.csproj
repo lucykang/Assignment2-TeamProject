@@ -149,6 +149,7 @@
       <DependentUpon>UserModel.edmx</DependentUpon>
       <LastGenOutput>UserModel.cs</LastGenOutput>
     </Content>
+    <Content Include="UserMenu\GameDelete.aspx" />
     <Content Include="UserMenu\GameRegister.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
@@ -270,6 +271,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenu\GameDelete.aspx.cs">
+      <DependentUpon>GameDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMenu\GameDelete.aspx.designer.cs">
+      <DependentUpon>GameDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserMenu\GameRegister.aspx.cs">
       <DependentUpon>GameRegister.aspx</DependentUpon>
