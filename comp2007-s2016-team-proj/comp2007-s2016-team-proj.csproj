@@ -132,6 +132,7 @@
     <Content Include="Assets\GamePhotos\4003.jpg" />
     <Content Include="Assets\GamePhotos\4001.jpg" />
     <Content Include="Assets\GamePhotos\4002.jpg" />
+    <Content Include="Assets\GamePhotos\4005.jpg" />
     <Content Include="Assets\icon.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Content\bootstrap-theme.css" />

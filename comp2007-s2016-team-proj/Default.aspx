@@ -41,7 +41,10 @@
                     
                     <div class="row featurette">
                         <div class="col-md-7 <%= (i % 2 == 0 ? "" : "col-md-push-5") %>">
-                            <h2 class="featurette-heading"><%= game.WinTeam %> VS <%= game.LostTeam %>
+                            <h2 class="featurette-heading">
+                                <a href="GameDetails.aspx?GameID=<%= game.GameID %>">
+                                    <%= game.WinTeam %> VS <%= game.LostTeam %>
+                                </a>
                                 <span class="text-muted"><%= game.GameDate.ToString("ddd, MMM dd yyyy") %></span>
                             </h2>
                             <p class="lead">
