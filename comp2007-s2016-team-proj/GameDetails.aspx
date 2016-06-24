@@ -13,24 +13,31 @@
                 <h1 class="text-center">Game Details</h1>
                 <br />
                 <div class="row">
-                    <!-- Game details -->
-                    <div class="col-md-6 panel game-form">
-                        <br />
-                        <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-striped table-borderless">
-                            <Fields>
-                                <asp:BoundField DataField="Name" HeaderText="Game: " />
-                                <asp:BoundField DataField="GameDate" HeaderText="Date: " DataFormatString="{0:MMM dd, yyyy}" />
-                                <asp:BoundField DataField="GameDescription" HeaderText="Game Description: " />
-                                <asp:BoundField DataField="NumSpectators" HeaderText="No. of Spectators: " />
-                                <asp:BoundField DataField="WinTeam" HeaderText="Winning Team: " />
-                                <asp:BoundField DataField="LostTeam" HeaderText="Lost Team: " />
-                            </Fields>
-                        </asp:DetailsView>
-                        <div class="text-center">
-                            <a href="/UserMenu/GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-submit"><i class="fa fa-pencil"></i> Edit</a>
-                            <a href="/UserMenu/GameDelete.aspx?GameID=<%= gameID %>" class="btn btn-cancel"><i class="fa fa-trash-o"></i> Delete</a>
+
+                    <div class="col-md-7">
+                        <!-- Thumbnail -->
+                        <div class="panel game-form">
+                            <img src="/Assets/GamePhotos/<%= gameID %>.jpg" style="max-width: 100%;" />
                         </div>
-                        
+
+                        <!-- Game details -->
+                        <div class="panel game-form">
+                            <br />
+                            <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-striped table-borderless">
+                                <Fields>
+                                    <asp:BoundField DataField="Name" HeaderText="Game: " />
+                                    <asp:BoundField DataField="GameDate" HeaderText="Date: " DataFormatString="{0:MMM dd, yyyy}" />
+                                    <asp:BoundField DataField="GameDescription" HeaderText="Game Description: " />
+                                    <asp:BoundField DataField="NumSpectators" HeaderText="No. of Spectators: " />
+                                    <asp:BoundField DataField="WinTeam" HeaderText="Winning Team: " />
+                                    <asp:BoundField DataField="LostTeam" HeaderText="Lost Team: " />
+                                </Fields>
+                            </asp:DetailsView>
+                            <div class="text-center">
+                                <a href="/UserMenu/GameRegister.aspx?GameID=<%= gameID %>" class="btn btn-submit"><i class="fa fa-pencil"></i> Edit</a>
+                                <a href="/UserMenu/GameDelete.aspx?GameID=<%= gameID %>" class="btn btn-cancel"><i class="fa fa-trash-o"></i> Delete</a>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Team details-->
@@ -64,6 +71,7 @@
                             </ItemTemplate>
                         </asp:FormView>
                     </div>
+
                 </div><!-- end of row -->
             </div><!-- end of panel -->
         </div><!-- end of container -->

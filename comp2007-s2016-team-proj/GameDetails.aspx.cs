@@ -51,8 +51,8 @@ namespace comp2007_s2016_team_proj
                 var games = (from gameList in db.Games
                             //join team in db.Teams on game.WinTeam equals team.TeamID
                             //where game.LostTeam == team.TeamID
-                        where gameList.GameID == gameID
-                        select gameList);//new { GameName = game.Name, WinTeamName = game.WinTeam.Name });
+                            where gameList.GameID == gameID
+                            select gameList);//new { GameName = game.Name, WinTeamName = game.WinTeam.Name });
 
                 if (games == null || games.Count() == 0)
                 {
