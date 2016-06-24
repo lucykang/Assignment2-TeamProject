@@ -10,7 +10,10 @@
     <div class="main">
         <div class="container">
             <div class="panel">
-                <h1 class="text-center">Game Details</h1>
+
+                <div class="page-header">
+                    <h1 class="text-center">Game Details</h1>
+                </div>
 
                 <div class="col-md-7">
                     <!-- Thumbnail -->
