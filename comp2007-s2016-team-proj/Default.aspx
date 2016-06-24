@@ -5,7 +5,7 @@
         Authors: Lucy, John
         Purpose: Landing page for the site where they can choose to login or view as guest
         Date Created: 06/04/16
-        Last Modified: 06/15/16
+        Last Modified: 06/24/16
         -->
         <div class="container">
             <div class="wrapper">
@@ -35,7 +35,7 @@
                 <p><br /></p>
 
                 <!-- START THE FEATURETTES -->
-                <div class ="row panel gamepanel">
+                <div class="row panel gamepanel">
                     <% int i = 0; %>
                     <% foreach (var game in previousGames) { %>
                     
@@ -62,5 +62,4 @@
                 </div>
             </div><!-- end of wrapper -->
         </div><!-- end of container -->
-    </div><!-- end of main -->
 </asp:Content>

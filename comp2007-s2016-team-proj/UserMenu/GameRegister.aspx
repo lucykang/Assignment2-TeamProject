@@ -5,7 +5,7 @@
         Authors: Lucy, John
         Purpose: This page will allow user to register game.
         Date Created: 06/13/16
-        Last Modified: 06/15/16
+        Last Modified: 06/24/16
     -->
     <div class="main">
         <div class="container">
@@ -13,6 +13,18 @@
                 <div class="page-header text-center">
                     <h1>Game Registration</h1>
                     <h3 class="text-primary">All fields are required</h3>
+                </div>
+
+                <!-- Thumbnail -->
+                <div class="col-md-12" style="margin-bottom: 16px;">
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <label for="thumbnail" class="control-label">Upload a Thumbnail:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <asp:FileUpload ID="thumbnail" runat="server" CssClass="form-control" />
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Game Details -->
@@ -42,7 +54,7 @@
                         <asp:TextBox CssClass="form-control" ID="WinTeamName" placeholder="Winning Team" required="true" MaxLength="50" runat="server" />
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="WinTeamScore">The Winning Team:</label>
+                        <label class="control-label" for="WinTeamScore">Score:</label>
                         <asp:TextBox CssClass="form-control" ID="WinTeamScore" placeholder="Winning Team Score" TextMode="Number" required="true" runat="server" />
                     </div>
                     <div class="form-group">
@@ -58,7 +70,7 @@
                         <asp:TextBox CssClass="form-control" ID="LoseTeamName" placeholder="Losing Team" required="true" MaxLength="50" runat="server" />
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="LoseTeamScore">The Losing Team:</label>
+                        <label class="control-label" for="LoseTeamScore">Score:</label>
                         <asp:TextBox CssClass="form-control" ID="LoseTeamScore" placeholder="Losing Team Score" TextMode="Number" required="true" runat="server" />
                     </div>
                     <div class="form-group">

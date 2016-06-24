@@ -26,8 +26,8 @@ namespace comp2007_s2016_team_proj
             using (BaseTrackerConnection db = new BaseTrackerConnection())
             {
                 Game game = (from gameList in db.Games
-                        where gameList.GameID == gameID
-                        select gameList).FirstOrDefault();
+                            where gameList.GameID == gameID
+                            select gameList).FirstOrDefault();
 
                 if(game == null)
                 {
@@ -91,12 +91,20 @@ namespace comp2007_s2016_team_proj
                 game.LostTeamScore = Convert.ToInt32(LoseTeamScore.Text);
                 game.LostTeamDescription = LoseTeamDescription.Text;
 
+                // add the game if new
                 if (Request.QueryString.Count <= 0)
                 {
                     db.Games.Add(game);
                 }
 
                 db.SaveChanges();
+
+                // save the thumbnail
+                if(thumbnail.HasFile)
+                {
+                    // string fileName = Path.GetFileName(thumbnail.PostedFile.FileName);
+                    thumbnail.PostedFile.SaveAs(Server.MapPath("~/Assets/GamePhotos/" + game.GameID + ".jpg"));
+                }
             }
 
             Response.Redirect("~/MainGamePage.aspx");
