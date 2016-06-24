@@ -15,14 +15,14 @@
                     <h1 class="text-center">Game Details</h1>
                 </div>
 
-                <div class="col-md-7">
+                <div class="col-md-6 game-form">
                     <!-- Thumbnail -->
-                    <div class="panel game-form">
+                    <div class="panel">
                         <img src="/Assets/GamePhotos/<%= gameID %>.jpg" style="max-width: 100%;" />
                     </div>
 
                     <!-- Game details -->
-                    <div class="panel game-form">
+                    <div class="panel">
                         <br />
                         <asp:DetailsView ID="GameDetailsView" runat="server" AutoGenerateRows="False" DataKeyNames="GameID" CssClass="table table-striped table-borderless">
                             <Fields>

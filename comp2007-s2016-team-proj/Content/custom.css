@@ -110,12 +110,12 @@ h1, h2, h3, h4, h5, h6, label{
 }
 
 .game-form{
-    /*margin-left: 25px;
-    margin-right: 25px;*/
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .teams-form{
-    /*margin-left: 20px;*/
+    margin-left: 20px;
 }
 
 .panel .panel-primary > .panel-heading {
