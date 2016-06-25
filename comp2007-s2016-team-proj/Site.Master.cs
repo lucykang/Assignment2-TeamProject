@@ -13,11 +13,12 @@ namespace comp2007_s2016_team_proj
         {
             switch (Page.Title)
             {
+                // if it's default page, it uses default.css file
                 case "Home Page":
                     customcss.Visible = false;
                     defaultcss.Visible = true;
                     break;
-                default:
+                default: //it uses custom.css file for the rest of the pages
                     customcss.Visible = true;
                     defaultcss.Visible = false;
                     break;

@@ -1,4 +1,10 @@
-﻿.gamebox{
+﻿/*
+    Authors: Lucy, John
+    Purpose: CSS for Main Game Page
+    Date Created: 06/04/16
+    Last Modified: 06/24/16
+*/
+.gamebox{
     padding-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.8);
 }
