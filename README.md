@@ -1,6 +1,6 @@
 # Game Tracker Web App 
 
-builted in ASP.NET and C#
+built in ASP.NET and C#
 
 Site: http://gametracker-w3.azurewebsites.net/
 
