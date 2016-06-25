@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="Users" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="comp2007_s2016_team_proj.Users" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <!--
+        Authors: Lucy, John
+        Purpose: This page allow only admin users to manage other users.
+        Date Created: 06/13/16
+        Last Modified: 06/24/16
+    -->
     <div class="container">
         <br />
         <div class="panel">
@@ -23,8 +29,8 @@
                                 ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-cancel btn-sm" />
                         </Columns>
                     </asp:GridView>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div> <!-- game-form panel -->
+            </div> <!-- row -->
+        </div> <!-- panel -->
+    </div> <!-- container -->
 </asp:Content>

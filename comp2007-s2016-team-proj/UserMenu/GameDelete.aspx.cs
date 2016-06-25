@@ -13,6 +13,7 @@ namespace comp2007_s2016_team_proj.UserMenu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if there was any string passed by query
             if(Request.QueryString.Count > 0)
             {
                 int gameID = Convert.ToInt32(Request.QueryString["GameID"]);
@@ -29,6 +30,7 @@ namespace comp2007_s2016_team_proj.UserMenu
                     }
                 }
             }
+            //redirect the user to the main game page after deletion
             Response.Redirect("/MainGamePage.aspx");
         }
     }

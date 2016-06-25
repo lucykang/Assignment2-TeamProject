@@ -7,7 +7,7 @@
         Authors: Lucy, John
         Purpose: This page will display multiple view of games from database.
         Date Created: 06/13/16
-        Last Modified: 06/15/16
+        Last Modified: 06/24/16
     -->
     <div class="main">
         <div class="container">

@@ -11,7 +11,7 @@ namespace comp2007_s2016_team_proj
 {
     public partial class MainGamePage : System.Web.UI.Page
     {
-
+        //games from database to be used at the MainGamePage.aspx file.
         public List<Game> games = new List<Game>();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -22,6 +22,14 @@ namespace comp2007_s2016_team_proj
             }
         }
 
+        /**
+         * <summary>
+         * This method gets the game data from the DB
+         * </summary>
+         * 
+         * @method FetchGames()
+         * @returns {void}
+         */
         private void FetchGames()
         {
             using (BaseTrackerConnection db = new BaseTrackerConnection())

@@ -19,17 +19,27 @@ namespace comp2007_s2016_team_proj
         {
             if (!IsPostBack)
             {
+                //if there was a querystring, it's edit profile page.
                 if (Request.QueryString.Count > 0)
                 {
                     PasswordPlaceHolder.Visible = false;
                     this.GetUser();
                 }
-                else
+                else //if none, then it's register page.
                 {
                     PasswordPlaceHolder.Visible = true;
                 }
             }
         }
+
+        /**
+         * <summary>
+         * This method gets the user data from the DB
+         * </summary>
+         * 
+         * @method GetUser()
+         * @returns {void}
+         */
         protected void GetUser()
         {
             string UserID = Request.QueryString["Id"].ToString();
