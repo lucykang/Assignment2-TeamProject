@@ -143,6 +143,16 @@
     <Content Include="Content\Game.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GameDetails.aspx" />
+    <Content Include="Models\BaseTrackerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
+      <LastGenOutput>BaseTrackerModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BaseTrackerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
+      <LastGenOutput>BaseTrackerModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\UserModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UserModel.edmx</DependentUpon>
@@ -158,16 +168,6 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="MainGamePage.aspx" />
-    <Content Include="Models\BaseTrackerModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
-      <LastGenOutput>BaseTrackerModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BaseTrackerModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
-      <LastGenOutput>BaseTrackerModel.cs</LastGenOutput>
-    </Content>
     <Content Include="packages.config" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\app.js" />
@@ -179,6 +179,13 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="Models\BaseTrackerModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BaseTrackerModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BaseTrackerModel.edmx.diagram">
+      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
+    </Content>
     <EntityDeploy Include="Models\UserModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>UserModel.Designer.cs</LastGenOutput>
@@ -192,13 +199,6 @@
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
     <Content Include="Site.Master" />
-    <EntityDeploy Include="Models\BaseTrackerModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BaseTrackerModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BaseTrackerModel.edmx.diagram">
-      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Scripts\jquery-2.2.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -261,6 +261,27 @@
     <Compile Include="Models\AspNetUserLogin.cs">
       <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseTrackerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseTrackerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaseTrackerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseTrackerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaseTrackerModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Game.cs">
+      <DependentUpon>BaseTrackerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Team.cs">
+      <DependentUpon>BaseTrackerModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\UserModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -310,27 +331,6 @@
     </Compile>
     <Compile Include="MainGamePage.aspx.designer.cs">
       <DependentUpon>MainGamePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BaseTrackerModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BaseTrackerModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BaseTrackerModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BaseTrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BaseTrackerModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BaseTrackerModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Game.cs">
-      <DependentUpon>BaseTrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Team.cs">
-      <DependentUpon>BaseTrackerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
